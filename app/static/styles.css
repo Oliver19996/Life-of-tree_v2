@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Syne:wght@500;700;800&display=swap");
+
+:root {
+  --bg: #06140c;
+  --bg2: #0b1f12;
+  --moss: #163d24;
+  --leaf: #7cffb2;
+  --chartreuse: #c8f542;
+  --gold: #d4af77;
+  --ink: #e8f6ea;
+  --dim: #8aa892;
+  --danger: #ff8a7a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: Syne, sans-serif;
+  background: radial-gradient(1200px 700px at 50% 110%, #0d2a18 0%, var(--bg) 55%);
+  color: var(--ink);
+  overflow: hidden;
+}
+button, input, textarea { font-family: inherit; }
+.serif { font-family: "Cormorant Garamond", serif; }
+
+#mist {
+  position: fixed; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(124,255,178,.06), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(212,175,119,.05), transparent 35%);
+  animation: drift 18s ease-in-out infinite alternate;
+}
+@keyframes drift { to { transform: translateY(-18px); } }
+
+.screen { position: fixed; inset: 0; display: none; }
+.screen.on { display: block; }
+
+.topbar {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 28px;
+}
+.brand { letter-spacing: .28em; font-size: 12px; color: var(--gold); text-transform: uppercase; }
+.topbar nav { display: flex; gap: 10px; }
+.ghost, .solid, .gold {
+  border: 1px solid rgba(124,255,178,.25);
+  background: rgba(6,20,12,.4);
+  color: var(--ink);
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  letter-spacing: .04em;
+}
+.solid { background: var(--leaf); color: #06140c; border: 0; font-weight: 700; }
+.gold { border-color: rgba(212,175,119,.4); color: var(--gold); }
+.ghost:hover, .gold:hover { border-color: var(--leaf); }
+
+#tree-wrap {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+}
+#tree {
+  width: min(92vw, 820px);
+  height: min(92vh, 820px);
+}
+#tree svg { width: 100%; height: 100%; overflow: visible; }
+.limb { cursor: pointer; transform-origin: 400px 520px; }
+.limb path.wood {
+  fill: none;
+  stroke: #2d6a45;
+  stroke-width: 10;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 8px rgba(124,255,178,.15));
+  transition: stroke .25s, stroke-width .25s;
+}
+.limb:hover path.wood, .limb.hot path.wood { stroke: var(--leaf); stroke-width: 13; }
+.limb.dim path.wood { stroke: #1a3d28; opacity: .35; }
+.limb.live path.wood { stroke: var(--chartreuse); }
+.stump { fill: #3a2716; }
+.stump-ring { fill: none; stroke: var(--gold); stroke-width: 2; opacity: .7; }
+.bud { fill: var(--leaf); }
+.grain-node { cursor: pointer; }
+.grain-node circle { fill: #0b1f12; stroke: var(--leaf); stroke-width: 2; }
+.grain-node.on circle { fill: var(--chartreuse); stroke: var(--gold); }
+
+.hud {
+  position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%);
+  z-index: 15; display: flex; gap: 10px; align-items: center;
+  padding: 12px 16px;
+  border-radius: 20px;
+  background: rgba(6,20,12,.72);
+  border: 1px solid rgba(124,255,178,.18);
+  backdrop-filter: blur(16px);
+}
+.hud b { color: var(--chartreuse); font-weight: 700; }
+.hud span { color: var(--dim); font-size: 13px; }
+
+.panel {
+  position: absolute; z-index: 16;
+  width: min(420px, 92vw);
+  max-height: 78vh;
+  overflow: auto;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(8,22,14,.88);
+  border: 1px solid rgba(212,175,119,.22);
+  box-shadow: 0 30px 80px rgba(0,0,0,.45);
+  backdrop-filter: blur(18px);
+}
+.panel.right { right: 24px; top: 84px; }
+.panel.center {
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: min(460px, 92vw);
+}
+.panel h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px; font-weight: 500; margin-bottom: 8px;
+}
+.panel p.lead { color: var(--dim); margin-bottom: 18px; line-height: 1.5; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.chip {
+  border: 1px solid rgba(124,255,178,.25);
+  background: transparent; color: var(--ink);
+  padding: 8px 12px; border-radius: 999px; cursor: pointer; font-size: 13px;
+}
+.chip.on { background: var(--leaf); color: #06140c; border-color: transparent; }
+label { display: block; font-size: 12px; color: var(--gold); letter-spacing: .12em; margin: 14px 0 6px; text-transform: uppercase; }
+input, textarea {
+  width: 100%;
+  background: #0a1a10;
+  border: 1px solid rgba(124,255,178,.18);
+  color: var(--ink);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.avatars { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.avatars img, .face {
+  width: 100%; aspect-ratio: 1; border-radius: 50%;
+  border: 2px solid transparent; cursor: pointer; object-fit: cover;
+}
+.avatars img.on, .face.on { border-color: var(--chartreuse); }
+.card {
+  display: flex; gap: 12px; align-items: center;
+  padding: 12px; border-radius: 16px;
+  border: 1px solid rgba(124,255,178,.12);
+  margin-bottom: 10px;
+}
+.card img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+.card .meta { font-size: 12px; color: var(--dim); }
+.msg { margin: 8px 0; padding: 10px 12px; border-radius: 14px; max-width: 85%; }
+.msg.mine { margin-left: auto; background: #163d24; }
+.msg.theirs { background: #0a1a10; border: 1px solid rgba(124,255,178,.12); }
+.landing-copy {
+  position: absolute; left: 50%; top: 11%; transform: translateX(-50%);
+  text-align: center; z-index: 12; width: min(640px, 90vw);
+}
+.landing-copy h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 8vw, 84px);
+  font-weight: 500;
+  line-height: .95;
+}
+.landing-copy h1 em { font-style: italic; color: var(--chartreuse); }
+.landing-copy p { margin-top: 14px; color: var(--dim); letter-spacing: .08em; }
+.hidden { display: none !important; }
+.tiny { font-size: 12px; color: var(--dim); margin-top: 10px; }
+a { color: var(--leaf); }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #1f5c38; border-radius: 8px; }

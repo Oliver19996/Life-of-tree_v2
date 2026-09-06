@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tree of Life — TOF</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div id="mist"></div>
+    <header class="topbar">
+      <div class="brand">Tree of Life · TOF</div>
+      <nav id="nav" class="hidden">
+        <button class="ghost" data-go="home">森</button>
+        <button class="ghost" data-go="discover">同じ枝</button>
+        <button class="ghost" data-go="inbox">手紙</button>
+        <button class="gold" id="btn-logout">出る</button>
+      </nav>
+    </header>
+
+    <div id="tree-wrap"><div id="tree"></div></div>
+
+    <section id="landing" class="screen on">
+      <div class="landing-copy">
+        <h1>同じ<em>割れ目</em>を<br />生きた人に会う</h1>
+        <p>FACEBOOK IS A FEED. THIS IS A FORK.</p>
+      </div>
+      <div class="hud" id="auth-hud">
+        <button class="solid" id="btn-demo">森に入る</button>
+        <button class="gold hidden" id="btn-google">Google</button>
+        <button class="ghost" id="btn-mail">メール</button>
+      </div>
+    </section>
+
+    <section id="mail-panel" class="panel center hidden">
+      <h2>メールで続く</h2>
+      <p class="lead">パスワードはない。リンク一通だけ。</p>
+      <label>Email</label>
+      <input id="email" type="email" placeholder="you@grove.world" />
+      <div class="row" style="margin-top:16px">
+        <button class="solid" id="btn-send-magic">リンクを送る</button>
+        <button class="ghost" id="btn-mail-close">閉じる</button>
+      </div>
+      <p class="tiny" id="magic-msg"></p>
+    </section>
+
+    <section id="onboard" class="panel right hidden">
+      <h2>心材を置く</h2>
+      <p class="lead">入力は最小。名前、顔、今いる枝。</p>
+      <label>呼び名</label>
+      <input id="name" maxlength="40" placeholder="Walker" />
+      <label>顔</label>
+      <div class="avatars" id="presets"></div>
+      <div class="row">
+        <label class="ghost" style="padding:8px 12px;border-radius:999px;cursor:pointer">
+          写真
+          <input id="upload" type="file" accept="image/*" class="hidden" />
+        </label>
+        <label class="ghost" style="padding:8px 12px;border-radius:999px;cursor:pointer">
+          自撮りをアニメへ
+          <input id="selfie" type="file" accept="image/*" class="hidden" />
+        </label>
+      </div>
+      <p class="tiny" id="gen-msg">生成は無料2回。18歳以上の自分の顔だけ。</p>
+      <label>都市（任意）</label>
+      <input id="city" maxlength="40" placeholder="Kyoto" />
+      <label>一言（任意）</label>
+      <input id="blurb" maxlength="140" placeholder="同じ夜にいた人へ。" />
+      <p class="tiny">中央の木で大枝 → 枝脈 → 木目を選ぶ。</p>
+      <div class="row">
+        <button class="solid" id="btn-save-tree">この枝で始める</button>
+      </div>
+    </section>
+
+    <div class="hud hidden" id="home-hud">
+      <span id="hud-path">枝を選ぶ</span>
+      <button class="solid" data-go="discover">同じ枝を見る</button>
+      <button class="ghost" data-go="edit">整える</button>
+    </div>
+
+    <section id="discover" class="panel right hidden">
+      <h2>同じ枝</h2>
+      <p class="lead">フィードはない。同じ枝脈の株だけ。</p>
+      <div id="people"></div>
+    </section>
+
+    <section id="inbox" class="panel right hidden">
+      <h2>手紙</h2>
+      <div id="reqs"></div>
+      <div id="threads"></div>
+    </section>
+
+    <section id="chat" class="panel right hidden">
+      <h2 id="chat-name">対話</h2>
+      <div id="msgs"></div>
+      <div class="row">
+        <input id="msg" placeholder="短く。" />
+        <button class="solid" id="btn-send">送る</button>
+      </div>
+    </section>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
