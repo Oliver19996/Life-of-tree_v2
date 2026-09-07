@@ -219,7 +219,11 @@ function renderTreeSvg() {
   const canvas = $("#tree-canvas");
   if (!canvas || !draft) return;
   const wrap = $("#tree-svg");
-  wrap.innerHTML = draft.svg || "";
+  if (me?.ai_image_url) {
+    wrap.innerHTML = `<img class="tree-photo" src="${me.ai_image_url}" alt="完成した木" />`;
+  } else {
+    wrap.innerHTML = draft.svg || "";
+  }
   const svg = wrap.querySelector("svg");
   if (svg) {
     svg.classList.remove("pulse");
@@ -394,17 +398,49 @@ async function findLeaf(id) {
   return leaves.find((l) => l.id === id);
 }
 
+async function generateAiImage() {
+  const btn = $("#ai-finish");
+  const version = me?.published_version_no;
+  if (!version) {
+    toast("先に木を完成させてください");
+    return;
+  }
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = "描いています…";
+  }
+  try {
+    const r = await api(`/api/v1/me/tree/${version}/ai-image`, { method: "POST", json: {} });
+    me.ai_image_url = r.url;
+    renderTreeSvg();
+    toast("AIの木を中央に表示しました");
+  } catch (err) {
+    const code = err.data?.error || "";
+    if (code === "ai_unavailable") toast("画像生成の設定がありません。SVGが正式な木です");
+    else if (code === "rate_limited" || err.status === 429) toast("回数の上限です。しばらくしてから試してください");
+    else if (code === "csrf") toast("もう一度ログインしてください");
+    else toast("生成に失敗したため、中央のSVGが正式な木です");
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.textContent = "AIで仕上げる";
+    }
+  }
+}
+
 async function publishTree() {
   try {
     await api("/api/v1/me/tree-draft/publish", { method: "POST", json: {} });
     simpleMode = false;
     toast("最初の木が完成しました。経験はあとから追加できます");
     await refreshMe();
-    await loadDraft();
+    if (me.has_published_tree) {
+      await treeView();
+      return;
+    }
     renderTreeSvg();
     renderTrunks();
     await renderSelect();
-    if (me.has_published_tree) loadFruits(me.id);
   } catch (err) {
     const missing = err.data?.missing_trunks;
     if (missing?.length) toast("まだ未完了の幹があります。各幹で葉を1つ以上選んでください");
@@ -437,12 +473,15 @@ async function treeView() {
         </div>
         <p class="tree-status" id="tree-status"></p>
         <button class="btn" id="publish-tree" hidden>この木を完成させる</button>
+        ${me.has_published_tree && me.ai_enabled ? `<button class="btn" id="ai-finish">AIで仕上げる</button>` : me.has_published_tree && !me.ai_enabled ? `<span class="muted">AI画像は未設定のため、中央のSVGが正式な木です</span>` : ""}
       </div>
       <aside class="select-pane" id="select-pane"></aside>
     </section>`;
   $("#toggle-tree").onclick = () => { treeCollapsed = !treeCollapsed; treeView(); };
   $("#mode").onclick = () => { simpleMode = !simpleMode; treeView(); };
   $("#publish-tree").onclick = publishTree;
+  const aiBtn = $("#ai-finish");
+  if (aiBtn) aiBtn.onclick = generateAiImage;
   renderTrunks();
   renderTreeSvg();
   await renderSelect();

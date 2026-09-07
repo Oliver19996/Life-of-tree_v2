@@ -133,7 +133,8 @@ label { font-weight: 600; }
   position: relative;
   overflow: hidden;
 }
-.tree-canvas svg { width: 100%; height: 700px; display: block; }
+.tree-canvas svg, .tree-canvas .tree-photo { width: 100%; height: 700px; display: block; }
+.tree-photo { object-fit: cover; }
 .tree-canvas svg.pulse { animation: tree-grow .45s ease; }
 @keyframes tree-grow {
   from { transform: scale(.97); opacity: .85; }

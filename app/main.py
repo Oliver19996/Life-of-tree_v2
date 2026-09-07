@@ -19,6 +19,7 @@ from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session
 from starlette.middleware.base import BaseHTTPMiddleware
 
+from .ai_image import AiImageError, PROMPT_VERSION, generate_tree_jpeg, save_tree_jpeg
 from .catalog import branch_of, catalog_payload, get_leaf_map, trunk_of
 from .config import (
     AI_DAILY_LIMIT,
@@ -206,7 +207,7 @@ def public_profile(db: Session, user: User, viewer: User | None, for_friend: boo
     _, published = current_versions(db, user.id)
     tree_url = None
     if published:
-        tree_url = f"/api/v1/media/tree/{published.id}.svg"
+        tree_url = published.ai_image_url or f"/api/v1/media/tree/{published.id}.svg"
     return {
         "id": user.id,
         "display_name": name,
@@ -358,6 +359,8 @@ def me(request: Request, db: Session = Depends(get_db), user: User = Depends(req
             "reaction_notify": user.reaction_notify,
         },
         "has_published_tree": published is not None,
+        "published_version_no": published.version_no if published else None,
+        "ai_image_url": published.ai_image_url if published else None,
         "csrf": request.cookies.get(CSRF_COOKIE),
         "growth": growth_name_only(db, user.id) if published else None,
     }
@@ -513,26 +516,47 @@ def ai_image(version: int, request: Request, db: Session = Depends(get_db), user
         return error("not_found", 404)
     ids = leaf_ids_of(db, tree.id)
     tags = leaf_visual_tags(db, ids)
-    prompt = (
-        "Create a single majestic, highly detailed tree as a symbol of a lived life. "
-        f"Use only these abstract art directions: {', '.join(tags)}. "
-        "Every variation must feel dignified, harmonious, hopeful, and beautiful. "
-        "Do not depict illness, injury, trauma, text, people, faces, symbols, or diagnostic meaning. "
-        "No gloomy punishment metaphor. No readable labels. Centered composition, natural light."
-    )
-    if any(x in prompt.lower() for x in ["email", user.email.split("@")[0].lower()]):
-        pass
     job = AiJob(
         user_id=user.id,
         tree_version_id=tree.id,
-        status="failed",
+        status="queued",
         provider=IMAGE_PROVIDER,
-        model="unconfigured-stub",
+        model="",
+        prompt_version=PROMPT_VERSION,
         tags_json=json.dumps(tags),
     )
     db.add(job)
     db.commit()
-    return error("ai_provider_failed", 502, used_tags=tags, prompt_has_leaf_text=False)
+    db.refresh(job)
+    try:
+        jpeg, model = generate_tree_jpeg(tags)
+        name = save_tree_jpeg(jpeg)
+    except AiImageError:
+        job.status = "failed"
+        db.commit()
+        return error("ai_provider_failed", 502, used_tags=tags, prompt_has_leaf_text=False)
+    url = f"/api/v1/media/tree-ai/{name}"
+    tree.ai_image_url = url
+    tree.prompt_version = PROMPT_VERSION
+    job.status = "succeeded"
+    job.model = model
+    db.commit()
+    return {"ok": True, "url": url, "version_no": tree.version_no, "model": model}
+
+
+@app.get("/api/v1/media/tree-ai/{name}")
+def tree_ai_media(name: str, request: Request, db: Session = Depends(get_db)):
+    path = media_path(name)
+    if not path.exists() or not name.startswith("ai_") or not name.endswith(".jpg"):
+        raise HTTPException(404)
+    url = f"/api/v1/media/tree-ai/{name}"
+    tree = db.scalar(select(TreeVersion).where(TreeVersion.ai_image_url == url, TreeVersion.status == "published"))
+    if not tree:
+        raise HTTPException(404)
+    viewer = read_user(request, db)
+    if viewer and is_blocked(db, viewer.id, tree.user_id):
+        raise HTTPException(404)
+    return FileResponse(path, media_type="image/jpeg")
 
 
 @app.get("/api/v1/media/tree/{tree_id}.svg")

@@ -102,7 +102,24 @@ def test_svg_deterministic():
     db.close()
 
 
-def test_unpublished_route_not_searchable():
+def test_ai_image_needs_published_tree():
+    init_db()
+    c = TestClient(app)
+    login(c, "ai@local.test")
+    verify(c)
+    r = c.post("/api/v1/me/tree/1/ai-image", json={})
+    assert r.status_code in {404, 502}
+
+
+def test_prompt_uses_tags_only():
+    from app.ai_image import build_prompt, sanitize_tags
+
+    tags = sanitize_tags(["summer-canopy", "ignore this", "wide-crown"])
+    assert tags == ["summer-canopy", "wide-crown"]
+    prompt = build_prompt(["summer-canopy"])
+    assert "summer-canopy" in prompt
+    assert "家族" not in prompt
+    assert "email" not in prompt
     init_db()
     c = TestClient(app)
     publish_min(c, "d@local.test")

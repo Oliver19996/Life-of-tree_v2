@@ -14,6 +14,7 @@ TREE_SECRET = os.getenv("TREE_SECRET", "dev-tree-secret")
 DEMO_LOGIN = os.getenv("DEMO_LOGIN", "true").lower() == "true"
 IMAGE_PROVIDER = os.getenv("IMAGE_PROVIDER", "").strip()
 IMAGE_API_KEY = os.getenv("IMAGE_API_KEY", "").strip()
+IMAGE_MODEL = os.getenv("IMAGE_MODEL", "dall-e-3").strip() or "dall-e-3"
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "").strip()
 GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "").strip()
 DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{DB_PATH}")
