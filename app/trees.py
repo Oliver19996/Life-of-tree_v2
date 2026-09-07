@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from .catalog import get_leaf_map, trunk_of
+from .catalog import get_leaf_map, load_raw, trunk_of
 from .config import GROWTH_RULE_VERSION
 from .db import (
     CustomRoute,
@@ -70,12 +70,23 @@ def published_leaf_ids(db: Session, user_id: int) -> set[str]:
     return set(leaf_ids_of(db, published.id))
 
 
+def catalog_trunk_ids() -> list[str]:
+    return [t["id"] for t in load_raw()["trunks"] if t.get("active", True)]
+
+
 def trunk_progress(leaf_ids: list[str]) -> dict[str, int]:
-    counts = {f"T0{i}": 0 for i in range(1, 6)}
+    counts = {tid: 0 for tid in catalog_trunk_ids()}
+    if not counts:
+        counts = {f"T0{i}": 0 for i in range(1, 6)}
     for lid in leaf_ids:
         t = trunk_of(lid)
         if t in counts:
             counts[t] += 1
+            continue
+        for tid in counts:
+            if lid.startswith(f"{tid}-"):
+                counts[tid] += 1
+                break
     return counts
 
 
@@ -103,12 +114,16 @@ def set_selections(db: Session, tree: TreeVersion, leaf_ids: list[str]) -> None:
             raise ValueError("unknown_leaf")
         seen.add(lid)
         unique.append(lid)
+    wanted = set(unique)
     existing = db.scalars(select(TreeSelection).where(TreeSelection.tree_version_id == tree.id)).all()
-    for row in existing:
-        db.delete(row)
+    have = {row.leaf_id: row for row in existing}
+    for lid, row in have.items():
+        if lid not in wanted:
+            db.delete(row)
     db.flush()
     for lid in unique:
-        db.add(TreeSelection(tree_version_id=tree.id, leaf_id=lid))
+        if lid not in have:
+            db.add(TreeSelection(tree_version_id=tree.id, leaf_id=lid))
     db.flush()
     refresh_svg(db, tree)
 

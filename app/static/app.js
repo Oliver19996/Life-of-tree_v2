@@ -36,9 +36,12 @@ async function api(path, opts = {}) {
   const ct = res.headers.get("content-type") || "";
   const data = ct.includes("json") ? await res.json() : null;
   if (!res.ok) {
-    const err = new Error((data && data.error) || res.statusText);
+    const detail = data && data.detail;
+    const code = (data && data.error) || (detail && detail.error) || (typeof detail === "string" ? detail : "") || res.statusText;
+    const err = new Error(code);
     err.status = res.status;
-    err.data = data;
+    err.data = { ...(data || {}), error: (data && data.error) || (typeof detail === "string" ? detail : data?.detail?.error) };
+    err.data.missing_trunks = data?.missing_trunks || data?.detail?.missing_trunks;
     throw err;
   }
   return data;
@@ -194,28 +197,64 @@ function selectedSet() {
 }
 
 async function saveSelections(ids) {
-  draft = await api("/api/v1/me/tree-draft/selections", { method: "PUT", json: { leaf_ids: ids } });
+  const next = await api("/api/v1/me/tree-draft/selections", { method: "PUT", json: { leaf_ids: ids } });
+  draft = { ...draft, ...next };
   renderTreeSvg();
   renderTrunks();
 }
 
+function localCanPublish() {
+  const ids = draft?.leaf_ids || [];
+  const trunks = catalog.trunks || [];
+  if (!trunks.length) return Boolean(draft?.can_publish);
+  return trunks.every((t) => ids.some((id) => id === t.id || id.startsWith(`${t.id}-`)));
+}
+
+function grownCount() {
+  const ids = draft?.leaf_ids || [];
+  return (catalog.trunks || []).filter((t) => ids.some((id) => id === t.id || id.startsWith(`${t.id}-`))).length;
+}
+
 function renderTreeSvg() {
-  const canvas = $(".tree-canvas");
+  const canvas = $("#tree-canvas");
   if (!canvas || !draft) return;
-  const wrap = $(".tree-svg");
+  const wrap = $("#tree-svg");
   wrap.innerHTML = draft.svg || "";
+  const svg = wrap.querySelector("svg");
+  if (svg) {
+    svg.classList.remove("pulse");
+    void svg.offsetWidth;
+    svg.classList.add("pulse");
+  }
+  const status = $("#tree-status");
+  if (status) {
+    const n = grownCount();
+    const total = (catalog.trunks || []).length || 5;
+    status.textContent = n >= total
+      ? "5つの幹がそろいました。この木を完成できます"
+      : `中央の木：${n} / ${total} の幹が伸びています。葉を選ぶと枝が育ちます`;
+  }
+  const pub = $("#publish-tree");
+  if (pub) {
+    const ok = Boolean(draft.can_publish) || localCanPublish();
+    pub.hidden = !ok;
+    pub.disabled = !ok;
+  }
 }
 
 function renderTrunks() {
   const host = $("#trunks");
   if (!host || !draft) return;
   host.innerHTML = catalog.trunks.map((t, i) => {
-    const p = draft.progress[t.id] || { count: 0, complete: false };
+    const p = (draft.progress && draft.progress[t.id]) || { count: 0, complete: false };
+    const localOn = (draft.leaf_ids || []).some((id) => id === t.id || id.startsWith(`${t.id}-`));
+    const done = p.complete || localOn;
+    const count = Math.max(p.count || 0, (draft.leaf_ids || []).filter((id) => id === t.id || id.startsWith(`${t.id}-`)).length);
     return `
       ${i ? '<div class="life-line"></div>' : ""}
       <button class="trunk-node" data-trunk="${t.id}" ${currentTrunk === t.id ? 'aria-current="true"' : ""}>
-        <span class="dot ${p.complete ? "done" : ""}">${p.complete ? "✓" : p.count}</span>
-        <span><strong>${escapeHtml(t.label_ja)}</strong><br /><span class="muted">${p.complete ? "1つ以上選択済み" : "未完了"} · ${p.count}葉</span></span>
+        <span class="dot ${done ? "done" : ""}">${done ? "✓" : count}</span>
+        <span><strong>${escapeHtml(t.label_ja)}</strong><br /><span class="muted">${done ? "1つ以上選択済み" : "未完了"} · ${count}葉</span></span>
       </button>`;
   }).join("");
   host.querySelectorAll("[data-trunk]").forEach((btn) => {
@@ -233,7 +272,7 @@ async function renderSelect() {
   const trunk = catalog.trunks.find((t) => t.id === currentTrunk);
   const selected = selectedSet();
   const branches = branchesOf(currentTrunk);
-  const complete = draft.progress[currentTrunk]?.complete;
+  const complete = Boolean(draft.progress?.[currentTrunk]?.complete) || (draft.leaf_ids || []).some((id) => id === currentTrunk || id.startsWith(`${currentTrunk}-`));
   if (simpleMode && !openBranch && branches[0]) openBranch = branches[0].id;
   pane.innerHTML = `
     <div>
@@ -247,11 +286,11 @@ async function renderSelect() {
     <div id="branch-list"></div>
     <div class="sticky-next row">
       ${complete && simpleMode ? `<button class="btn" id="next-trunk">次の幹へ</button>` : ""}
-      ${draft.can_publish ? `<button class="btn" id="publish">この木を完成させる</button>` : `<span class="muted">5つの幹で1葉以上選ぶと完成できます</span>`}
+      ${(draft.can_publish || localCanPublish()) ? `<button class="btn" id="publish">この木を完成させる</button>` : `<span class="muted">5つの幹で1葉以上選ぶと完成できます（いま ${grownCount()} / ${(catalog.trunks || []).length || 5}）</span>`}
     </div>`;
   const list = $("#branch-list");
   list.innerHTML = branches.map((b) => {
-    const count = [...selected].filter((id) => id.startsWith(b.id)).length;
+    const count = [...selected].filter((id) => id === b.id || id.startsWith(`${b.id}-`)).length;
     return `<div>
       <button class="accordion" data-branch="${b.id}" aria-expanded="${openBranch === b.id}">${openBranch === b.id ? "▲" : "▼"} ${escapeHtml(b.label_ja)} ${count ? `· 選択 ${count}` : ""}</button>
       <div class="chips" id="leaves-${b.id}"></div>
@@ -363,8 +402,9 @@ async function publishTree() {
     await refreshMe();
     await loadDraft();
     renderTreeSvg();
-    renderSelect();
-    loadFruits(me.id);
+    renderTrunks();
+    await renderSelect();
+    if (me.has_published_tree) loadFruits(me.id);
   } catch (err) {
     const missing = err.data?.missing_trunks;
     if (missing?.length) toast("まだ未完了の幹があります。各幹で葉を1つ以上選んでください");
@@ -390,14 +430,19 @@ async function treeView() {
     </div>
     <section class="workspace">
       <aside class="panel" style="padding:16px"><div class="trunk-list" id="trunks"></div></aside>
-      <div class="tree-canvas ${treeCollapsed ? "collapsed" : ""}" id="tree-canvas">
-        <div id="tree-svg"></div>
-        <div class="fruits" id="fruits"></div>
+      <div class="tree-stage">
+        <div class="tree-canvas ${treeCollapsed ? "collapsed" : ""}" id="tree-canvas">
+          <div id="tree-svg"></div>
+          <div class="fruits" id="fruits"></div>
+        </div>
+        <p class="tree-status" id="tree-status"></p>
+        <button class="btn" id="publish-tree" hidden>この木を完成させる</button>
       </div>
       <aside class="select-pane" id="select-pane"></aside>
     </section>`;
   $("#toggle-tree").onclick = () => { treeCollapsed = !treeCollapsed; treeView(); };
   $("#mode").onclick = () => { simpleMode = !simpleMode; treeView(); };
+  $("#publish-tree").onclick = publishTree;
   renderTrunks();
   renderTreeSvg();
   await renderSelect();
@@ -728,7 +773,6 @@ async function settingsView() {
     <p>${me.growth ? escapeHtml(me.growth.name) : "未完成"}</p>
     <a class="btn secondary" href="#tree">木を再編集</a>
     <button class="btn secondary" id="export">データを出力</button>
-    <button class="btn secondary" id="ai" ${me.ai_enabled ? "" : "disabled"}>AIで仕上げる</button>
     ${me.is_admin ? `<a class="btn secondary" href="#admin">管理</a>` : ""}
     <button class="btn danger" id="bye">退会する</button>
     <button class="btn ghost" id="out">ログアウト</button>
@@ -740,13 +784,6 @@ async function settingsView() {
     a.href = URL.createObjectURL(blob);
     a.download = "tree-of-life-export.json";
     a.click();
-  };
-  $("#ai").onclick = async () => {
-    try {
-      await api(`/api/v1/me/tree/${draft?.version_no || 1}/ai-image`, { method: "POST", json: {} });
-    } catch {
-      toast("AIは未設定か失敗したため、SVGが正式な木です");
-    }
   };
   $("#out").onclick = async () => { await api("/api/v1/auth/logout", { method: "POST", json: {} }); location.hash = "#landing"; route(); };
   $("#bye").onclick = async () => {

@@ -9,6 +9,14 @@ from .config import TREE_SECRET
 
 GROWTH_NAMES = {1: "芽光", 2: "花明", 3: "星実", 4: "光冠", 5: "神樹"}
 
+TRUNK_ARMS = [
+    {"id": "T01", "x2": 108, "y2": 318, "bulge": -42},
+    {"id": "T02", "x2": 188, "y2": 118, "bulge": -30},
+    {"id": "T03", "x2": 300, "y2": 62, "bulge": 10},
+    {"id": "T04", "x2": 412, "y2": 118, "bulge": 30},
+    {"id": "T05", "x2": 492, "y2": 318, "bulge": 42},
+]
+
 
 def growth_stage(count: int) -> int:
     if count >= 100:
@@ -32,13 +40,57 @@ def _rng(seed: str, n: int) -> float:
     return int(h[:8], 16) / 0xFFFFFFFF
 
 
-def collect_tags(leaf_tags: list[list[str]]) -> list[str]:
-    seen: list[str] = []
-    for group in leaf_tags:
-        for tag in group:
-            if tag not in seen:
-                seen.append(tag)
-    return seen[:12]
+def trunk_counts(leaf_ids: list[str]) -> dict[str, int]:
+    counts = {arm["id"]: 0 for arm in TRUNK_ARMS}
+    for lid in leaf_ids:
+        tid = lid.split("-")[0]
+        if tid in counts:
+            counts[tid] += 1
+    return counts
+
+
+def _taper(x0: float, y0: float, x1: float, y1: float, w0: float, w1: float, bulge: float) -> str:
+    dx, dy = x1 - x0, y1 - y0
+    length = math.hypot(dx, dy) or 1
+    nx, ny = -dy / length, dx / length
+    ux, uy = dx / length, dy / length
+
+    def pt(t: float, side: float, extra: float) -> tuple[float, float]:
+        x = x0 + ux * length * t + nx * extra
+        y = y0 + uy * length * t + ny * extra
+        w = (w0 + (w1 - w0) * t) / 2
+        return x + nx * side * w, y + ny * side * w
+
+    a = pt(0, 1, 0)
+    c1 = pt(0.35, 1, bulge)
+    c2 = pt(0.7, 1, bulge * 0.4)
+    tip_l = pt(1, 1, 0)
+    tip_r = pt(1, -1, 0)
+    c3 = pt(0.7, -1, bulge * 0.4)
+    c4 = pt(0.35, -1, bulge)
+    d = pt(0, -1, 0)
+    return (
+        f"M {a[0]:.1f} {a[1]:.1f} C {c1[0]:.1f} {c1[1]:.1f} {c2[0]:.1f} {c2[1]:.1f} {tip_l[0]:.1f} {tip_l[1]:.1f} "
+        f"L {tip_r[0]:.1f} {tip_r[1]:.1f} C {c3[0]:.1f} {c3[1]:.1f} {c4[0]:.1f} {c4[1]:.1f} {d[0]:.1f} {d[1]:.1f} Z"
+    )
+
+
+def _foliage(cx: float, cy: float, n: int, scale: float, seed: str, salt: int) -> str:
+    greens = ["#2f4d28", "#3a5c32", "#4a6f3c", "#5c8348", "#6d9454", "#7eaa62", "#8fb872"]
+    parts = []
+    for i in range(n):
+        a = _rng(seed, salt + i) * math.tau
+        r = (10 + (i % 8) * 9) * scale
+        x = cx + math.cos(a) * r
+        y = cy + math.sin(a) * r * 0.62
+        w = (7 + (i % 5) * 2) * scale
+        h = (12 + (i % 4) * 3) * scale
+        rot = a * 180 / math.pi + 70
+        parts.append(
+            f'<ellipse cx="{x:.1f}" cy="{y:.1f}" rx="{w:.1f}" ry="{h:.1f}" '
+            f'fill="{greens[i % len(greens)]}" opacity="0.92" transform="rotate({rot:.0f} {x:.1f} {y:.1f})" />'
+        )
+    return "".join(parts)
 
 
 def render_tree_svg(
@@ -48,99 +100,56 @@ def render_tree_svg(
     extra_tags: list[str] | None = None,
 ) -> str:
     seed = visual_seed(leaf_ids, version_no)
-    count = len(leaf_ids)
-    density = min(1.0, 0.12 + count * 0.018)
-    hue = 140 + int(_rng(seed, 1) * 28) - 8
-    crown_r = 90 + density * 70
-    branch_n = 6 + int(density * 10)
-    flower_n = 0 if stage < 2 else 8 + stage * 4
-    fruit_n = 0 if stage < 3 else 6 + stage * 3
-    halo = stage >= 4
-    stardust = stage >= 5
+    counts = trunk_counts(leaf_ids)
+    grown = sum(1 for n in counts.values() if n >= 1)
+    total_leaves = len(leaf_ids)
+    stem_h = 90 + grown * 28
+    trunk_w = 10 + grown * 4 + min(total_leaves, 20) * 0.4
+    top = 430
+    base = 680
 
-    paths = []
-    glow_paths = []
-    for i in range(branch_n):
-        ang = -110 + i * (220 / max(branch_n - 1, 1)) + (_rng(seed, 10 + i) - 0.5) * 12
-        length = 70 + density * 90 + _rng(seed, 40 + i) * 30
-        rad = math.radians(ang)
-        x2 = 300 + math.sin(rad) * length
-        y2 = 430 - math.cos(rad) * length
-        cx = 300 + math.sin(rad) * length * 0.45 + (_rng(seed, 80 + i) - 0.5) * 40
-        cy = 430 - math.cos(rad) * length * 0.4
-        d = f"M 300 460 Q {cx:.1f} {cy:.1f} {x2:.1f} {y2:.1f}"
-        paths.append(d)
-        glow_paths.append(d)
-
-    leaves_g = []
-    for i in range(int(18 + density * 40)):
-        a = _rng(seed, 200 + i) * math.tau
-        r = 20 + _rng(seed, 300 + i) * crown_r
-        x = 300 + math.cos(a) * r * 0.85
-        y = 250 + math.sin(a) * r * 0.55
-        opacity = 0.35 + _rng(seed, 400 + i) * 0.45
-        size = 8 + _rng(seed, 500 + i) * 14
-        leaves_g.append(
-            f'<ellipse cx="{x:.1f}" cy="{y:.1f}" rx="{size:.1f}" ry="{size * 0.55:.1f}" '
-            f'transform="rotate({int(_rng(seed, 600+i)*80-40)} {x:.1f} {y:.1f})" '
-            f'fill="hsla({hue + int(_rng(seed,700+i)*20)}, 48%, {42 + _rng(seed,800+i)*18:.0f}%, {opacity:.2f})" />'
+    arms = []
+    for i, arm in enumerate(TRUNK_ARMS):
+        n = counts[arm["id"]]
+        alive = n >= 1
+        opacity = 1 if alive else 0.14
+        w0 = 10 + min(n, 8) * 1.4 if alive else 5
+        w1 = 4 + min(n, 8) * 0.5 if alive else 2
+        path = _taper(300, top, arm["x2"], arm["y2"], w0, w1, arm["bulge"])
+        leaves = ""
+        if alive:
+            leaves = _foliage(arm["x2"], arm["y2"] - 8, 8 + min(n, 12) * 6, 0.85 + min(n, 8) * 0.08, seed, 40 * i)
+        arms.append(
+            f'<g data-trunk="{arm["id"]}" data-leaves="{n}" opacity="{opacity}">'
+            f'<path d="{path}" fill="#5a3a24"/>{leaves}</g>'
         )
 
-    flowers = []
-    for i in range(flower_n):
-        a = _rng(seed, 900 + i) * math.tau
-        r = 40 + _rng(seed, 910 + i) * (crown_r - 10)
-        x = 300 + math.cos(a) * r * 0.8
-        y = 240 + math.sin(a) * r * 0.5
-        flowers.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.2" fill="#F7F3E8" opacity="0.9"/>')
+    canopy = ""
+    if grown >= 5:
+        canopy = (
+            _foliage(300, 168, 36 + min(total_leaves, 30), 2.1, seed, 900)
+            + _foliage(210, 210, 18, 1.4, seed, 1200)
+            + _foliage(390, 210, 18, 1.4, seed, 1500)
+        )
 
-    fruits = []
-    for i in range(fruit_n):
-        a = _rng(seed, 1000 + i) * math.tau
-        r = 50 + _rng(seed, 1010 + i) * (crown_r - 20)
-        x = 300 + math.cos(a) * r * 0.75
-        y = 255 + math.sin(a) * r * 0.48
-        fruits.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.4" fill="#66E3A4" opacity="0.75"/>')
+    sapling = ""
+    if grown == 0:
+        sapling = (
+            f'<path d="M 296 {base} C 298 560, 299 500, 300 {top + 40} C 301 500, 302 560, 304 {base} Z" fill="#6b4a32"/>'
+            f'<ellipse cx="300" cy="{top + 28}" rx="16" ry="22" fill="#7eaa62" opacity="0.85"/>'
+        )
 
-    particles = []
-    if stage >= 3:
-        for i in range(10 + stage * 4):
-            x = 180 + _rng(seed, 1100 + i) * 240
-            y = 80 + _rng(seed, 1200 + i) * 280
-            particles.append(f'<circle class="particle" cx="{x:.1f}" cy="{y:.1f}" r="1.4" fill="#66E3A4" opacity="0.35"/>')
-
-    halo_svg = ""
-    if halo:
-        halo_svg = '<ellipse cx="300" cy="240" rx="210" ry="150" fill="rgba(102,227,164,0.16)"/>'
-    if stardust:
-        halo_svg += '<ellipse cx="300" cy="230" rx="240" ry="170" fill="rgba(247,243,232,0.18)"/>'
-
-    trunk_w = 18 + density * 10
-    glow_d = " ".join(f'<path d="{d}" fill="none" stroke="#66E3A4" stroke-width="2" opacity="0.45" class="life-glow"/>' for d in glow_paths)
-    branch_d = " ".join(f'<path d="{d}" fill="none" stroke="#1F6B45" stroke-width="3.2" stroke-linecap="round"/>' for d in paths)
-
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-hidden="true">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-hidden="true" data-grown="{grown}" data-leaves="{total_leaves}">
   <defs>
     <radialGradient id="sky" cx="50%" cy="28%" r="70%">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#F0F8F3"/>
     </radialGradient>
-    <style>
-      .life-glow {{ filter: url(#soft); }}
-      @media (prefers-reduced-motion: reduce) {{
-        .particle, .life-glow {{ animation: none !important; }}
-      }}
-    </style>
-    <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
   </defs>
   <rect width="600" height="720" fill="url(#sky)"/>
-  <path d="M40 640 C 140 560, 220 680, 300 640 C 390 590, 470 690, 560 640 L 560 720 L 40 720 Z" fill="#DDF3E6" opacity="0.55"/>
-  {halo_svg}
-  <path d="M {300 - trunk_w/2:.1f} 680 C 292 560, 294 500, 300 430 C 306 500, 308 560, {300 + trunk_w/2:.1f} 680 Z" fill="#3A6B4F"/>
-  {glow_d}
-  {branch_d}
-  <g>{''.join(leaves_g)}</g>
-  <g>{''.join(flowers)}</g>
-  <g>{''.join(fruits)}</g>
-  <g>{''.join(particles)}</g>
+  <ellipse cx="300" cy="690" rx="{140 + grown * 28}" ry="28" fill="#DDF3E6" opacity="0.7"/>
+  {sapling}
+  <path d="M {300 - trunk_w / 2:.1f} {base} C 292 {base - stem_h}, 294 {top + 40}, 300 {top} C 306 {top + 40}, 308 {base - stem_h}, {300 + trunk_w / 2:.1f} {base} Z" fill="#3A6B4F"/>
+  {"".join(arms)}
+  {canopy}
 </svg>'''

@@ -2,6 +2,7 @@ from fastapi.testclient import TestClient
 
 from app.db import SessionLocal, User, init_db
 from app.main import app
+from app.tree_svg import render_tree_svg
 from app.trees import ensure_draft, set_selections
 from sqlalchemy import select
 
@@ -91,7 +92,13 @@ def test_svg_deterministic():
     first = d.svg_body
     set_selections(db, d, ["T01-B01-L01", "T02-B01-L01", "T03-B01-L01", "T04-B01-L01", "T05-B01-L01"])
     assert d.svg_body == first
+    assert 'data-grown="5"' in d.svg_body
     assert "枯" not in d.svg_body
+    empty = render_tree_svg([], 1)
+    one = render_tree_svg(["T01-B01-L01"], 1)
+    assert 'data-grown="0"' in empty
+    assert 'data-grown="1"' in one
+    assert empty != one
     db.close()
 
 
