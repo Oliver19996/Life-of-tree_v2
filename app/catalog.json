@@ -1,0 +1,7121 @@
+{
+  "trunks": [
+    {
+      "id": "T01",
+      "label_ja": "家族と生育環境",
+      "sort_order": 1,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02",
+      "label_ja": "学びと教育",
+      "sort_order": 2,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03",
+      "label_ja": "仕事と経済",
+      "sort_order": 3,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04",
+      "label_ja": "人間関係と居場所",
+      "sort_order": 4,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05",
+      "label_ja": "心身と人生の転機",
+      "sort_order": 5,
+      "active": true,
+      "version": 1
+    }
+  ],
+  "branches": [
+    {
+      "id": "T01-B01",
+      "trunk_id": "T01",
+      "label_ja": "母・母的養育者",
+      "sort_order": 1,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02",
+      "trunk_id": "T01",
+      "label_ja": "父・父的養育者",
+      "sort_order": 2,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03",
+      "trunk_id": "T01",
+      "label_ja": "きょうだい",
+      "sort_order": 3,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04",
+      "trunk_id": "T01",
+      "label_ja": "祖父母・親族",
+      "sort_order": 4,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05",
+      "trunk_id": "T01",
+      "label_ja": "家庭の雰囲気",
+      "sort_order": 5,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06",
+      "trunk_id": "T01",
+      "label_ja": "文化・出自・ルーツ",
+      "sort_order": 6,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07",
+      "trunk_id": "T01",
+      "label_ja": "パートナー・自分の家庭",
+      "sort_order": 7,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01",
+      "trunk_id": "T02",
+      "label_ja": "幼児期・保育",
+      "sort_order": 1,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02",
+      "trunk_id": "T02",
+      "label_ja": "小学校",
+      "sort_order": 2,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03",
+      "trunk_id": "T02",
+      "label_ja": "中学校",
+      "sort_order": 3,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04",
+      "trunk_id": "T02",
+      "label_ja": "高校・高専",
+      "sort_order": 4,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05",
+      "trunk_id": "T02",
+      "label_ja": "大学・専門教育",
+      "sort_order": 5,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06",
+      "trunk_id": "T02",
+      "label_ja": "学び直し・資格",
+      "sort_order": 6,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07",
+      "trunk_id": "T02",
+      "label_ja": "学び方・個性",
+      "sort_order": 7,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01",
+      "trunk_id": "T03",
+      "label_ja": "初めての仕事",
+      "sort_order": 1,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02",
+      "trunk_id": "T03",
+      "label_ja": "職場の人間関係",
+      "sort_order": 2,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03",
+      "trunk_id": "T03",
+      "label_ja": "キャリア選択",
+      "sort_order": 3,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04",
+      "trunk_id": "T03",
+      "label_ja": "働き方・生活両立",
+      "sort_order": 4,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05",
+      "trunk_id": "T03",
+      "label_ja": "失敗・再出発",
+      "sort_order": 5,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06",
+      "trunk_id": "T03",
+      "label_ja": "お金・生活基盤",
+      "sort_order": 6,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07",
+      "trunk_id": "T03",
+      "label_ja": "独立・創業・創作",
+      "sort_order": 7,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01",
+      "trunk_id": "T04",
+      "label_ja": "友人関係",
+      "sort_order": 1,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02",
+      "trunk_id": "T04",
+      "label_ja": "恋愛・親密な関係",
+      "sort_order": 2,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03",
+      "trunk_id": "T04",
+      "label_ja": "結婚・別れ",
+      "sort_order": 3,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04",
+      "trunk_id": "T04",
+      "label_ja": "地域・コミュニティ",
+      "sort_order": 4,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05",
+      "trunk_id": "T04",
+      "label_ja": "孤独・ひとり時間",
+      "sort_order": 5,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06",
+      "trunk_id": "T04",
+      "label_ja": "信頼・境界線",
+      "sort_order": 6,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07",
+      "trunk_id": "T04",
+      "label_ja": "社会との関わり・偏見",
+      "sort_order": 7,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01",
+      "trunk_id": "T05",
+      "label_ja": "からだ・健康",
+      "sort_order": 1,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02",
+      "trunk_id": "T05",
+      "label_ja": "こころ・感情",
+      "sort_order": 2,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03",
+      "trunk_id": "T05",
+      "label_ja": "自己理解・コンプレックス",
+      "sort_order": 3,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04",
+      "trunk_id": "T05",
+      "label_ja": "喪失・別れ",
+      "sort_order": 4,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05",
+      "trunk_id": "T05",
+      "label_ja": "生活の転機",
+      "sort_order": 5,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06",
+      "trunk_id": "T05",
+      "label_ja": "習慣・回復",
+      "sort_order": 6,
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07",
+      "trunk_id": "T05",
+      "label_ja": "意味・信念・これから",
+      "sort_order": 7,
+      "active": true,
+      "version": 1
+    }
+  ],
+  "leaves": [
+    {
+      "id": "T01-B01-L01",
+      "branch_id": "T01-B01",
+      "label_short_ja": "姉・友人のようだった",
+      "description_ja": "幼少期に姉や友人のような存在だった",
+      "search_terms_ja": [
+        "姉・友人のようだった",
+        "幼少期に姉や友人のような存在だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9b1bd4f18fbf2eda",
+      "visual_tags": [
+        "summer-canopy",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L02",
+      "branch_id": "T01-B01",
+      "label_short_ja": "安心して甘えられた",
+      "description_ja": "安心して甘えられる相手だった",
+      "search_terms_ja": [
+        "安心して甘えられた",
+        "安心して甘えられる相手だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "371e74e22eeeb427",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L03",
+      "branch_id": "T01-B01",
+      "label_short_ja": "期待に応えすぎた",
+      "description_ja": "期待に応えようと無理をした",
+      "search_terms_ja": [
+        "期待に応えようと無理をした",
+        "期待に応えすぎた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "e0347e7757030e99",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L04",
+      "branch_id": "T01-B01",
+      "label_short_ja": "進路に強い影響",
+      "description_ja": "考え方や進路に強い影響を受けた",
+      "search_terms_ja": [
+        "考え方や進路に強い影響を受けた",
+        "進路に強い影響"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "6d9829dd818ce1eb",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L05",
+      "branch_id": "T01-B01",
+      "label_short_ja": "距離が近すぎる",
+      "description_ja": "距離が近すぎると感じていた",
+      "search_terms_ja": [
+        "距離が近すぎる",
+        "距離が近すぎると感じていた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d7297a87c2d2bfa7",
+      "visual_tags": [
+        "petal-dawn",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L06",
+      "branch_id": "T01-B01",
+      "label_short_ja": "話を聞いてもらえなかった",
+      "description_ja": "十分に話を聞いてもらえなかった",
+      "search_terms_ja": [
+        "話を聞いてもらえなかった",
+        "十分に話を聞いてもらえなかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7c9551579d737ee7",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L07",
+      "branch_id": "T01-B01",
+      "label_short_ja": "離れて暮らす期間が長かった",
+      "description_ja": "離れて暮らす期間が長かった",
+      "search_terms_ja": [
+        "離れて暮らす期間が長かった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7b0c45e6c4cffb40",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L08",
+      "branch_id": "T01-B01",
+      "label_short_ja": "病気や不調を支えた経験",
+      "description_ja": "病気や不調を支えた経験がある",
+      "search_terms_ja": [
+        "病気や不調を支えた経験がある",
+        "病気や不調を支えた経験"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "a2ee33afe56b76c4",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L09",
+      "branch_id": "T01-B01",
+      "label_short_ja": "関係を見直した",
+      "description_ja": "大人になって関係を見直した",
+      "search_terms_ja": [
+        "関係を見直した",
+        "大人になって関係を見直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9b6212c8a7649996",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B01-L10",
+      "branch_id": "T01-B01",
+      "label_short_ja": "感謝とわだかまり",
+      "description_ja": "感謝とわだかまりの両方がある",
+      "search_terms_ja": [
+        "感謝とわだかまりの両方がある",
+        "感謝とわだかまり"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9b267961ed759446",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L01",
+      "branch_id": "T01-B02",
+      "label_short_ja": "遊びや挑戦を教えてくれた",
+      "description_ja": "遊びや挑戦を教えてくれた",
+      "search_terms_ja": [
+        "遊びや挑戦を教えてくれた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "952d3e6850b52b89",
+      "visual_tags": [
+        "amber-ring",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L02",
+      "branch_id": "T01-B02",
+      "label_short_ja": "尊敬して背中を追った",
+      "description_ja": "尊敬する背中を追ってきた",
+      "search_terms_ja": [
+        "尊敬して背中を追った",
+        "尊敬する背中を追ってきた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ac793c28756907d5",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L03",
+      "branch_id": "T01-B02",
+      "label_short_ja": "認められるため努力",
+      "description_ja": "認めてもらうため努力した",
+      "search_terms_ja": [
+        "認めてもらうため努力した",
+        "認められるため努力"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "968cb9f37d9d7c51",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L04",
+      "branch_id": "T01-B02",
+      "label_short_ja": "会話が少なく距離を感じた",
+      "description_ja": "会話が少なく距離を感じた",
+      "search_terms_ja": [
+        "会話が少なく距離を感じた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "eed44da8ea2a905c",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L05",
+      "branch_id": "T01-B02",
+      "label_short_ja": "厳しさや威圧感に緊張した",
+      "description_ja": "厳しさや威圧感に緊張した",
+      "search_terms_ja": [
+        "厳しさや威圧感に緊張した"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "652e581cc64452da",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L06",
+      "branch_id": "T01-B02",
+      "label_short_ja": "不在が多かった",
+      "description_ja": "仕事などで不在が多かった",
+      "search_terms_ja": [
+        "不在が多かった",
+        "仕事などで不在が多かった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "cb155fe62c95b8af",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L07",
+      "branch_id": "T01-B02",
+      "label_short_ja": "価値観の違いに悩んだ",
+      "description_ja": "価値観の違いに悩んだ",
+      "search_terms_ja": [
+        "価値観の違いに悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d52a3732dfcedd83",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L08",
+      "branch_id": "T01-B02",
+      "label_short_ja": "病気や不調を支えた経験",
+      "description_ja": "病気や不調を支えた経験がある",
+      "search_terms_ja": [
+        "病気や不調を支えた経験がある",
+        "病気や不調を支えた経験"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "875c4d979f71f972",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L09",
+      "branch_id": "T01-B02",
+      "label_short_ja": "対話が増えた",
+      "description_ja": "大人になって対話が増えた",
+      "search_terms_ja": [
+        "対話が増えた",
+        "大人になって対話が増えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "30fb77fe3f54f6c5",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B02-L10",
+      "branch_id": "T01-B02",
+      "label_short_ja": "感謝とわだかまり",
+      "description_ja": "感謝とわだかまりの両方がある",
+      "search_terms_ja": [
+        "感謝とわだかまりの両方がある",
+        "感謝とわだかまり"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "00c5252e6d3b3dc2",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L01",
+      "branch_id": "T01-B03",
+      "label_short_ja": "姉や兄を頼りに育った",
+      "description_ja": "姉や兄を頼りに育った",
+      "search_terms_ja": [
+        "姉や兄を頼りに育った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "028a5241a6599f02",
+      "visual_tags": [
+        "amber-ring",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L02",
+      "branch_id": "T01-B03",
+      "label_short_ja": "弟や妹を守る役割だった",
+      "description_ja": "弟や妹を守る役割だった",
+      "search_terms_ja": [
+        "弟や妹を守る役割だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b0efed1c23ac1d21",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L03",
+      "branch_id": "T01-B03",
+      "label_short_ja": "何でも話せる関係だった",
+      "description_ja": "何でも話せる関係だった",
+      "search_terms_ja": [
+        "何でも話せる関係だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9988da6fb77d38fc",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L04",
+      "branch_id": "T01-B03",
+      "label_short_ja": "比較されることがつらかった",
+      "description_ja": "比較されることがつらかった",
+      "search_terms_ja": [
+        "比較されることがつらかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "bae4fd735dd39c09",
+      "visual_tags": [
+        "river-jade",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L05",
+      "branch_id": "T01-B03",
+      "label_short_ja": "競争や嫉妬を感じていた",
+      "description_ja": "競争や嫉妬を感じていた",
+      "search_terms_ja": [
+        "競争や嫉妬を感じていた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f350ac8b95069c01",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L06",
+      "branch_id": "T01-B03",
+      "label_short_ja": "年齢差で交流が少ない",
+      "description_ja": "年齢差が大きく交流が少なかった",
+      "search_terms_ja": [
+        "年齢差が大きく交流が少なかった",
+        "年齢差で交流が少ない"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "3f81ff0c49f2f964",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L07",
+      "branch_id": "T01-B03",
+      "label_short_ja": "離別や疎遠を経験",
+      "description_ja": "離別や疎遠を経験した",
+      "search_terms_ja": [
+        "離別や疎遠を経験",
+        "離別や疎遠を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "554520873fe3cd5c",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L08",
+      "branch_id": "T01-B03",
+      "label_short_ja": "家族事情を共に背負った",
+      "description_ja": "家族の事情を一緒に背負った",
+      "search_terms_ja": [
+        "家族の事情を一緒に背負った",
+        "家族事情を共に背負った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ad64a2b186cb86a4",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L09",
+      "branch_id": "T01-B03",
+      "label_short_ja": "関係が近づいた",
+      "description_ja": "大人になって関係が近づいた",
+      "search_terms_ja": [
+        "大人になって関係が近づいた",
+        "関係が近づいた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8fcf6236c6cacb23",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B03-L10",
+      "branch_id": "T01-B03",
+      "label_short_ja": "一人っ子として育った",
+      "description_ja": "一人っ子として育った",
+      "search_terms_ja": [
+        "一人っ子として育った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "4b5cce5730c9e3d2",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L01",
+      "branch_id": "T01-B04",
+      "label_short_ja": "祖父母に育ててもらった時期",
+      "description_ja": "祖父母に育ててもらった時期がある",
+      "search_terms_ja": [
+        "祖父母に育ててもらった時期",
+        "祖父母に育ててもらった時期がある"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1674048fcaeb42e8",
+      "visual_tags": [
+        "summer-canopy",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L02",
+      "branch_id": "T01-B04",
+      "label_short_ja": "親族の家を安心できる場所",
+      "description_ja": "親族の家を安心できる場所と感じた",
+      "search_terms_ja": [
+        "親族の家を安心できる場所",
+        "親族の家を安心できる場所と感じた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "74f32514c43a913f",
+      "visual_tags": [
+        "river-jade",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L03",
+      "branch_id": "T01-B04",
+      "label_short_ja": "世代の知恵を受け継いだ",
+      "description_ja": "世代を超えた知恵や習慣を受け継いだ",
+      "search_terms_ja": [
+        "世代の知恵を受け継いだ",
+        "世代を超えた知恵や習慣を受け継いだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "598256ce2b801a94",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L04",
+      "branch_id": "T01-B04",
+      "label_short_ja": "親族の期待や干渉が重かった",
+      "description_ja": "親族の期待や干渉が重かった",
+      "search_terms_ja": [
+        "親族の期待や干渉が重かった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "815385010191e4e9",
+      "visual_tags": [
+        "moon-silver",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L05",
+      "branch_id": "T01-B04",
+      "label_short_ja": "親族間の対立に巻き込まれた",
+      "description_ja": "親族間の対立に巻き込まれた",
+      "search_terms_ja": [
+        "親族間の対立に巻き込まれた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "efbe304fc1030e92",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L06",
+      "branch_id": "T01-B04",
+      "label_short_ja": "冠婚葬祭で絆を実感",
+      "description_ja": "冠婚葬祭で家族のつながりを実感した",
+      "search_terms_ja": [
+        "冠婚葬祭で絆を実感",
+        "冠婚葬祭で家族のつながりを実感した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "444635badf272e74",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L07",
+      "branch_id": "T01-B04",
+      "label_short_ja": "介護や看病に関わった",
+      "description_ja": "介護や看病に関わった",
+      "search_terms_ja": [
+        "介護や看病に関わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "2c0fe4c4ff298b49",
+      "visual_tags": [
+        "amber-ring",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L08",
+      "branch_id": "T01-B04",
+      "label_short_ja": "死別を通じて価値観が変わった",
+      "description_ja": "死別を通じて価値観が変わった",
+      "search_terms_ja": [
+        "死別を通じて価値観が変わった"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "795949a162f1c412",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L09",
+      "branch_id": "T01-B04",
+      "label_short_ja": "遠方で交流が限られていた",
+      "description_ja": "遠方で交流が限られていた",
+      "search_terms_ja": [
+        "遠方で交流が限られていた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "bcda8d1e6a4019c9",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B04-L10",
+      "branch_id": "T01-B04",
+      "label_short_ja": "血縁外の選んだ家族",
+      "description_ja": "血縁以外の人を家族のように感じた",
+      "search_terms_ja": [
+        "血縁以外の人を家族のように感じた",
+        "血縁外の選んだ家族"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1aa4236a929ae6c9",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L01",
+      "branch_id": "T01-B05",
+      "label_short_ja": "会話や笑いの多い家庭だった",
+      "description_ja": "会話や笑いの多い家庭だった",
+      "search_terms_ja": [
+        "会話や笑いの多い家庭だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ef458b7725b583b8",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L02",
+      "branch_id": "T01-B05",
+      "label_short_ja": "静かで落ち着く家庭だった",
+      "description_ja": "静かで落ち着く家庭だった",
+      "search_terms_ja": [
+        "静かで落ち着く家庭だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "6b601a3170defbe3",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L03",
+      "branch_id": "T01-B05",
+      "label_short_ja": "ルールやしつけが厳しかった",
+      "description_ja": "ルールやしつけが厳しかった",
+      "search_terms_ja": [
+        "ルールやしつけが厳しかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0e1565a4b211dffa",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L04",
+      "branch_id": "T01-B05",
+      "label_short_ja": "家族の顔色を読む多かった",
+      "description_ja": "家族の顔色を読むことが多かった",
+      "search_terms_ja": [
+        "家族の顔色を読むことが多かった",
+        "家族の顔色を読む多かった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "25b59daa9a7b3b5f",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L05",
+      "branch_id": "T01-B05",
+      "label_short_ja": "口論や緊張が絶えなかった",
+      "description_ja": "口論や緊張が絶えなかった",
+      "search_terms_ja": [
+        "口論や緊張が絶えなかった"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "82db1ad520aef718",
+      "visual_tags": [
+        "river-jade",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L06",
+      "branch_id": "T01-B05",
+      "label_short_ja": "家事や世話を早くから担った",
+      "description_ja": "家事や世話を早くから担った",
+      "search_terms_ja": [
+        "家事や世話を早くから担った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "bb155aa8905fda0c",
+      "visual_tags": [
+        "petal-dawn",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L07",
+      "branch_id": "T01-B05",
+      "label_short_ja": "転勤や引っ越しが多かった",
+      "description_ja": "転勤や引っ越しが多かった",
+      "search_terms_ja": [
+        "転勤や引っ越しが多かった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1068d6c2d403d9b3",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L08",
+      "branch_id": "T01-B05",
+      "label_short_ja": "経済状況の変化を経験",
+      "description_ja": "経済状況の変化を経験した",
+      "search_terms_ja": [
+        "経済状況の変化を経験",
+        "経済状況の変化を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "4c1163a0daa44be6",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L09",
+      "branch_id": "T01-B05",
+      "label_short_ja": "家族の秘密を抱えていた",
+      "description_ja": "家族の秘密を抱えていた",
+      "search_terms_ja": [
+        "家族の秘密を抱えていた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "669d4dae164c3975",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B05-L10",
+      "branch_id": "T01-B05",
+      "label_short_ja": "安心できる家庭像を作り直",
+      "description_ja": "自分で安心できる家庭像を作り直している",
+      "search_terms_ja": [
+        "自分で安心できる家庭像を作り直している",
+        "安心できる家庭像を作り直"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d26e6d5e48123a98",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L01",
+      "branch_id": "T01-B06",
+      "label_short_ja": "地域の伝統や祭りに親しんだ",
+      "description_ja": "地域の伝統や祭りに親しんだ",
+      "search_terms_ja": [
+        "地域の伝統や祭りに親しんだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "36f4a774b32ebe01",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L02",
+      "branch_id": "T01-B06",
+      "label_short_ja": "家業や家の役割を受け継いだ",
+      "description_ja": "家業や家の役割を受け継いだ",
+      "search_terms_ja": [
+        "家業や家の役割を受け継いだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "45ddadc61f623016",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L03",
+      "branch_id": "T01-B06",
+      "label_short_ja": "複数の文化の間で育った",
+      "description_ja": "複数の文化の間で育った",
+      "search_terms_ja": [
+        "複数の文化の間で育った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "c101effd77319dda",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L04",
+      "branch_id": "T01-B06",
+      "label_short_ja": "方言や出身地を誇りに思う",
+      "description_ja": "方言や出身地を誇りに思う",
+      "search_terms_ja": [
+        "方言や出身地を誇りに思う"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "44f9d817295e6662",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L05",
+      "branch_id": "T01-B06",
+      "label_short_ja": "出自を説明しづらい",
+      "description_ja": "出自を説明しづらいと感じた",
+      "search_terms_ja": [
+        "出自を説明しづらい",
+        "出自を説明しづらいと感じた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "6134a522c7cca513",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L06",
+      "branch_id": "T01-B06",
+      "label_short_ja": "周囲との文化差に戸惑った",
+      "description_ja": "周囲との文化差に戸惑った",
+      "search_terms_ja": [
+        "周囲との文化差に戸惑った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "09244fa31acf74ca",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L07",
+      "branch_id": "T01-B06",
+      "label_short_ja": "ルーツを後から調べ開始",
+      "description_ja": "ルーツを後から調べ始めた",
+      "search_terms_ja": [
+        "ルーツを後から調べ始めた",
+        "ルーツを後から調べ開始"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1c6ef7c7b08edde4",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L08",
+      "branch_id": "T01-B06",
+      "label_short_ja": "移住や帰国で居場所が変わった",
+      "description_ja": "移住や帰国で居場所が変わった",
+      "search_terms_ja": [
+        "移住や帰国で居場所が変わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ac87edffb0f60c74",
+      "visual_tags": [
+        "river-jade",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L09",
+      "branch_id": "T01-B06",
+      "label_short_ja": "家族の信仰に影響された",
+      "description_ja": "家族の信仰や習慣に影響を受けた",
+      "search_terms_ja": [
+        "家族の信仰に影響された",
+        "家族の信仰や習慣に影響を受けた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "2e545b8b7bb76b5e",
+      "visual_tags": [
+        "river-jade",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B06-L10",
+      "branch_id": "T01-B06",
+      "label_short_ja": "自分なりのルーツを構築",
+      "description_ja": "自分なりのルーツの捉え方を築いた",
+      "search_terms_ja": [
+        "自分なりのルーツを構築",
+        "自分なりのルーツの捉え方を築いた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0bac2a08b6275e01",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L01",
+      "branch_id": "T01-B07",
+      "label_short_ja": "安心本音を話せる関係を築いた",
+      "description_ja": "安心して本音を話せる関係を築いた",
+      "search_terms_ja": [
+        "安心して本音を話せる関係を築いた",
+        "安心本音を話せる関係を築いた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "66433393a0ac71ab",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L02",
+      "branch_id": "T01-B07",
+      "label_short_ja": "恋愛や結婚で新しい家族を得た",
+      "description_ja": "恋愛や結婚で新しい家族を得た",
+      "search_terms_ja": [
+        "恋愛や結婚で新しい家族を得た"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5a512da137316fee",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L03",
+      "branch_id": "T01-B07",
+      "label_short_ja": "生活習慣の違いを調整",
+      "description_ja": "生活習慣の違いを調整してきた",
+      "search_terms_ja": [
+        "生活習慣の違いを調整してきた",
+        "生活習慣の違いを調整"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a04970a1f941aac2",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L04",
+      "branch_id": "T01-B07",
+      "label_short_ja": "家事や育児の分担に悩んだ",
+      "description_ja": "家事や育児の分担に悩んだ",
+      "search_terms_ja": [
+        "家事や育児の分担に悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "2ca10227535872d3",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L05",
+      "branch_id": "T01-B07",
+      "label_short_ja": "別居や離婚を経験",
+      "description_ja": "別居や離婚を経験した",
+      "search_terms_ja": [
+        "別居や離婚を経験した",
+        "別居や離婚を経験"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "5b609ecf27f666ad",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L06",
+      "branch_id": "T01-B07",
+      "label_short_ja": "子どもを持つかどうか考えた",
+      "description_ja": "子どもを持つかどうか考えた",
+      "search_terms_ja": [
+        "子どもを持つかどうか考えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ecb948ecd59d8e22",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L07",
+      "branch_id": "T01-B07",
+      "label_short_ja": "子育てで幼少期を再考",
+      "description_ja": "子育てを通じて自分の幼少期を見直した",
+      "search_terms_ja": [
+        "子育てを通じて自分の幼少期を見直した",
+        "子育てで幼少期を再考"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "01bc9d82cfd08c37",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L08",
+      "branch_id": "T01-B07",
+      "label_short_ja": "義家族との距離感に悩んだ",
+      "description_ja": "義家族との距離感に悩んだ",
+      "search_terms_ja": [
+        "義家族との距離感に悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "09af5ba4533de294",
+      "visual_tags": [
+        "amber-ring",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L09",
+      "branch_id": "T01-B07",
+      "label_short_ja": "ひとりで家庭を支えてきた",
+      "description_ja": "ひとりで家庭を支えてきた",
+      "search_terms_ja": [
+        "ひとりで家庭を支えてきた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "241ca4804ec1fdc4",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T01-B07-L10",
+      "branch_id": "T01-B07",
+      "label_short_ja": "血縁に限らない家族",
+      "description_ja": "血縁や婚姻に限らない家族を選んだ",
+      "search_terms_ja": [
+        "血縁や婚姻に限らない家族を選んだ",
+        "血縁に限らない家族"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "33b510c9f9160934",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L01",
+      "branch_id": "T02-B01",
+      "label_short_ja": "遊びや創作に夢中だった",
+      "description_ja": "遊びや創作に夢中だった",
+      "search_terms_ja": [
+        "遊びや創作に夢中だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "e334acc27388357f",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L02",
+      "branch_id": "T02-B01",
+      "label_short_ja": "先生に見守られて安心した",
+      "description_ja": "先生に見守られて安心した",
+      "search_terms_ja": [
+        "先生に見守られて安心した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "678461ed305b8784",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L03",
+      "branch_id": "T02-B01",
+      "label_short_ja": "集団生活になじめない",
+      "description_ja": "集団生活になじむのが難しかった",
+      "search_terms_ja": [
+        "集団生活になじむのが難しかった",
+        "集団生活になじめない"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "40ae0c5d35bcdf84",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L04",
+      "branch_id": "T02-B01",
+      "label_short_ja": "親と離れることが不安だった",
+      "description_ja": "親と離れることが不安だった",
+      "search_terms_ja": [
+        "親と離れることが不安だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "310ec7034ee6d945",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L05",
+      "branch_id": "T02-B01",
+      "label_short_ja": "早くから得意なことがあった",
+      "description_ja": "早くから得意なことがあった",
+      "search_terms_ja": [
+        "早くから得意なことがあった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "fd60529557d2c232",
+      "visual_tags": [
+        "summer-canopy",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L06",
+      "branch_id": "T02-B01",
+      "label_short_ja": "言葉や発達の違いを意識した",
+      "description_ja": "言葉や発達の違いを意識した",
+      "search_terms_ja": [
+        "言葉や発達の違いを意識した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "3fb218a214574042",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L07",
+      "branch_id": "T02-B01",
+      "label_short_ja": "転園や環境の変化を経験",
+      "description_ja": "転園や環境の変化を経験した",
+      "search_terms_ja": [
+        "転園や環境の変化を経験した",
+        "転園や環境の変化を経験"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7552345366ece60e",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L08",
+      "branch_id": "T02-B01",
+      "label_short_ja": "友だちとの初衝突",
+      "description_ja": "友だちとの初めての衝突を覚えている",
+      "search_terms_ja": [
+        "友だちとの初衝突",
+        "友だちとの初めての衝突を覚えている"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5680ec1a1259101e",
+      "visual_tags": [
+        "amber-ring",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L09",
+      "branch_id": "T02-B01",
+      "label_short_ja": "行事で達成感を味わった",
+      "description_ja": "行事で達成感を味わった",
+      "search_terms_ja": [
+        "行事で達成感を味わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "40d8fb745ef2b435",
+      "visual_tags": [
+        "summer-canopy",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B01-L10",
+      "branch_id": "T02-B01",
+      "label_short_ja": "幼少期の記憶があまりない",
+      "description_ja": "幼少期の記憶があまりない",
+      "search_terms_ja": [
+        "幼少期の記憶があまりない"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f1b38b74eefcd575",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L01",
+      "branch_id": "T02-B02",
+      "label_short_ja": "好きな教科との出会い",
+      "description_ja": "好きな教科に出会った",
+      "search_terms_ja": [
+        "好きな教科との出会い",
+        "好きな教科に出会った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "edd2668feb8f1615",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L02",
+      "branch_id": "T02-B02",
+      "label_short_ja": "先生の言葉に励まされた",
+      "description_ja": "先生の言葉に励まされた",
+      "search_terms_ja": [
+        "先生の言葉に励まされた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "502e43eb8bcc1f9d",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L03",
+      "branch_id": "T02-B02",
+      "label_short_ja": "友だちと夢中で遊んだ",
+      "description_ja": "友だちと夢中で遊んだ",
+      "search_terms_ja": [
+        "友だちと夢中で遊んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5389ae4f1688f33a",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L04",
+      "branch_id": "T02-B02",
+      "label_short_ja": "いじめを受けていた",
+      "description_ja": "いじめを受けていた",
+      "search_terms_ja": [
+        "いじめを受けていた"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "4617b2d911777452",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L05",
+      "branch_id": "T02-B02",
+      "label_short_ja": "いじめを見て動けなかった",
+      "description_ja": "いじめや孤立を見て動けなかった",
+      "search_terms_ja": [
+        "いじめや孤立を見て動けなかった",
+        "いじめを見て動けなかった"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "ff1efea0b2312e69",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L06",
+      "branch_id": "T02-B02",
+      "label_short_ja": "勉強いくのが難しかった",
+      "description_ja": "勉強についていくのが難しかった",
+      "search_terms_ja": [
+        "勉強についていくのが難しかった",
+        "勉強いくのが難しかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "12a567544bdea9d2",
+      "visual_tags": [
+        "river-jade",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L07",
+      "branch_id": "T02-B02",
+      "label_short_ja": "成績への期待が重かった",
+      "description_ja": "成績への期待が重かった",
+      "search_terms_ja": [
+        "成績への期待が重かった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "798cf0690460b41b",
+      "visual_tags": [
+        "amber-ring",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L08",
+      "branch_id": "T02-B02",
+      "label_short_ja": "転校や不登校を経験",
+      "description_ja": "転校や不登校を経験した",
+      "search_terms_ja": [
+        "転校や不登校を経験した",
+        "転校や不登校を経験"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "2c894883d48e0d26",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L09",
+      "branch_id": "T02-B02",
+      "label_short_ja": "係や行事で役割を得た",
+      "description_ja": "係や行事で役割を得た",
+      "search_terms_ja": [
+        "係や行事で役割を得た"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "998e656ea8263017",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B02-L10",
+      "branch_id": "T02-B02",
+      "label_short_ja": "放課後の居場所に救われた",
+      "description_ja": "放課後の居場所に救われた",
+      "search_terms_ja": [
+        "放課後の居場所に救われた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5e8dff4f00e9e3fa",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L01",
+      "branch_id": "T02-B03",
+      "label_short_ja": "部活動に打ち込んだ",
+      "description_ja": "部活動に打ち込んだ",
+      "search_terms_ja": [
+        "部活動に打ち込んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "14bbcd05b442047a",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L02",
+      "branch_id": "T02-B03",
+      "label_short_ja": "親友と呼べる人との出会い",
+      "description_ja": "親友と呼べる人に出会った",
+      "search_terms_ja": [
+        "親友と呼べる人に出会った",
+        "親友と呼べる人との出会い"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "6b7a11c48b74476e",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L03",
+      "branch_id": "T02-B03",
+      "label_short_ja": "進路を意識開始",
+      "description_ja": "進路を意識し始めた",
+      "search_terms_ja": [
+        "進路を意識開始",
+        "進路を意識し始めた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "010ea04b17b3f1a9",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L04",
+      "branch_id": "T02-B03",
+      "label_short_ja": "人間関係の変化に疲れた",
+      "description_ja": "人間関係の変化に疲れた",
+      "search_terms_ja": [
+        "人間関係の変化に疲れた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a08c254c986591f4",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L05",
+      "branch_id": "T02-B03",
+      "label_short_ja": "いじめや仲間外れを経験",
+      "description_ja": "いじめや仲間外れを経験した",
+      "search_terms_ja": [
+        "いじめや仲間外れを経験した",
+        "いじめや仲間外れを経験"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "7c42d54ac35b87fc",
+      "visual_tags": [
+        "petal-dawn",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L06",
+      "branch_id": "T02-B03",
+      "label_short_ja": "学校に行けない時期",
+      "description_ja": "学校に行けない時期があった",
+      "search_terms_ja": [
+        "学校に行けない時期",
+        "学校に行けない時期があった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d9f1be9afcedb649",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L07",
+      "branch_id": "T02-B03",
+      "label_short_ja": "成績や受験に強い不安があった",
+      "description_ja": "成績や受験に強い不安があった",
+      "search_terms_ja": [
+        "成績や受験に強い不安があった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "70c6f8410559c322",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L08",
+      "branch_id": "T02-B03",
+      "label_short_ja": "自分の外見を気に開始",
+      "description_ja": "自分の外見を気にし始めた",
+      "search_terms_ja": [
+        "自分の外見を気にし始めた",
+        "自分の外見を気に開始"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d3fd7a07eefcbbd3",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L09",
+      "branch_id": "T02-B03",
+      "label_short_ja": "先生や先輩に支えられた",
+      "description_ja": "先生や先輩に支えられた",
+      "search_terms_ja": [
+        "先生や先輩に支えられた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "cae8bf824fae0e50",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B03-L10",
+      "branch_id": "T02-B03",
+      "label_short_ja": "学校外の活動に居場所を発見",
+      "description_ja": "学校外の活動に居場所を見つけた",
+      "search_terms_ja": [
+        "学校外の活動に居場所を見つけた",
+        "学校外の活動に居場所を発見"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0ea3d7e27f6ab467",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L01",
+      "branch_id": "T02-B04",
+      "label_short_ja": "専門的に学びたい分野を発見",
+      "description_ja": "専門的に学びたい分野を見つけた",
+      "search_terms_ja": [
+        "専門的に学びたい分野を発見",
+        "専門的に学びたい分野を見つけた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "113acfd53620af12",
+      "visual_tags": [
+        "moon-silver",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L02",
+      "branch_id": "T02-B04",
+      "label_short_ja": "部活や文化祭で仲間と達成した",
+      "description_ja": "部活や文化祭で仲間と達成した",
+      "search_terms_ja": [
+        "部活や文化祭で仲間と達成した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f22035888a0ed506",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L03",
+      "branch_id": "T02-B04",
+      "label_short_ja": "受験や進路選択に迷った",
+      "description_ja": "受験や進路選択に迷った",
+      "search_terms_ja": [
+        "受験や進路選択に迷った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0247350c4f828eaf",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L04",
+      "branch_id": "T02-B04",
+      "label_short_ja": "校風や集団になじめなかった",
+      "description_ja": "校風や集団になじめなかった",
+      "search_terms_ja": [
+        "校風や集団になじめなかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8f0a92c9595fecb8",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L05",
+      "branch_id": "T02-B04",
+      "label_short_ja": "中退・転校・通信制",
+      "description_ja": "中退や転校、通信制への変更を経験した",
+      "search_terms_ja": [
+        "中退や転校",
+        "中退や転校、通信制への変更を経験した",
+        "中退・転校・通信制",
+        "通信制への変更を経験した"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "e5767f4a52b8e2f8",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L06",
+      "branch_id": "T02-B04",
+      "label_short_ja": "アルバイトと学業を両立した",
+      "description_ja": "アルバイトと学業を両立した",
+      "search_terms_ja": [
+        "アルバイトと学業を両立した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ab4aea18325f02dc",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L07",
+      "branch_id": "T02-B04",
+      "label_short_ja": "家庭事情が学びに影響した",
+      "description_ja": "家庭事情が学びに影響した",
+      "search_terms_ja": [
+        "家庭事情が学びに影響した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8613d8dcc7b76bec",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L08",
+      "branch_id": "T02-B04",
+      "label_short_ja": "恋愛や友情を通じて成長した",
+      "description_ja": "恋愛や友情を通じて成長した",
+      "search_terms_ja": [
+        "恋愛や友情を通じて成長した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "4a41bf446d949be1",
+      "visual_tags": [
+        "river-jade",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L09",
+      "branch_id": "T02-B04",
+      "label_short_ja": "失敗から学び方を変えた",
+      "description_ja": "失敗から学び方を変えた",
+      "search_terms_ja": [
+        "失敗から学び方を変えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "09c4d2d739050648",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B04-L10",
+      "branch_id": "T02-B04",
+      "label_short_ja": "卒業後も続くつながりができた",
+      "description_ja": "卒業後も続くつながりができた",
+      "search_terms_ja": [
+        "卒業後も続くつながりができた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ca9a92f490c35ad8",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L01",
+      "branch_id": "T02-B05",
+      "label_short_ja": "学びたいテーマを深く追究した",
+      "description_ja": "学びたいテーマを深く追究した",
+      "search_terms_ja": [
+        "学びたいテーマを深く追究した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7eef86da89a7751c",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L02",
+      "branch_id": "T02-B05",
+      "label_short_ja": "異なる価値観の人との出会い",
+      "description_ja": "異なる価値観の人に出会った",
+      "search_terms_ja": [
+        "異なる価値観の人との出会い",
+        "異なる価値観の人に出会った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "899caca8c3f8b53b",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L03",
+      "branch_id": "T02-B05",
+      "label_short_ja": "一人暮らしで自立を学んだ",
+      "description_ja": "一人暮らしで自立を学んだ",
+      "search_terms_ja": [
+        "一人暮らしで自立を学んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "323515022721693d",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L04",
+      "branch_id": "T02-B05",
+      "label_short_ja": "専攻が自分に合わない",
+      "description_ja": "専攻が自分に合わないと感じた",
+      "search_terms_ja": [
+        "専攻が自分に合わない",
+        "専攻が自分に合わないと感じた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f3af31b27404ff70",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L05",
+      "branch_id": "T02-B05",
+      "label_short_ja": "単位や卒業に苦労した",
+      "description_ja": "単位や卒業に苦労した",
+      "search_terms_ja": [
+        "単位や卒業に苦労した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1025b2ca036857e1",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L06",
+      "branch_id": "T02-B05",
+      "label_short_ja": "休学や退学を経験",
+      "description_ja": "休学や退学を経験した",
+      "search_terms_ja": [
+        "休学や退学を経験した",
+        "休学や退学を経験"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "87f244ddee01a2b3",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L07",
+      "branch_id": "T02-B05",
+      "label_short_ja": "奨学金や学費の負担を抱えた",
+      "description_ja": "奨学金や学費の負担を抱えた",
+      "search_terms_ja": [
+        "奨学金や学費の負担を抱えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "86fa3d019d84e592",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L08",
+      "branch_id": "T02-B05",
+      "label_short_ja": "留学で視野が広がった",
+      "description_ja": "留学や海外経験で視野が広がった",
+      "search_terms_ja": [
+        "留学で視野が広がった",
+        "留学や海外経験で視野が広がった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "84534773a3909a57",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L09",
+      "branch_id": "T02-B05",
+      "label_short_ja": "研究室や実習の関係に悩んだ",
+      "description_ja": "研究室や実習の関係に悩んだ",
+      "search_terms_ja": [
+        "研究室や実習の関係に悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0360219e1d643d08",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B05-L10",
+      "branch_id": "T02-B05",
+      "label_short_ja": "学外活動で道を発見",
+      "description_ja": "学外活動やインターンで道を見つけた",
+      "search_terms_ja": [
+        "学外活動で道を発見",
+        "学外活動やインターンで道を見つけた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a4eb384c8eaf4217",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L01",
+      "branch_id": "T02-B06",
+      "label_short_ja": "学び直した",
+      "description_ja": "社会人になって学び直した",
+      "search_terms_ja": [
+        "学び直した",
+        "社会人になって学び直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "06bf140ed90eb171",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L02",
+      "branch_id": "T02-B06",
+      "label_short_ja": "資格取得が自信につながった",
+      "description_ja": "資格取得が自信につながった",
+      "search_terms_ja": [
+        "資格取得が自信につながった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ba6ab3c09a575ea5",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L03",
+      "branch_id": "T02-B06",
+      "label_short_ja": "独学で新しい技能を身につけた",
+      "description_ja": "独学で新しい技能を身につけた",
+      "search_terms_ja": [
+        "独学で新しい技能を身につけた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "46f49fd18e19601e",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L04",
+      "branch_id": "T02-B06",
+      "label_short_ja": "仕事と勉強の両立に苦労した",
+      "description_ja": "仕事と勉強の両立に苦労した",
+      "search_terms_ja": [
+        "仕事と勉強の両立に苦労した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d8c4e7e14e41fa65",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L05",
+      "branch_id": "T02-B06",
+      "label_short_ja": "試験の不合格を何度も経験",
+      "description_ja": "試験の不合格を何度も経験した",
+      "search_terms_ja": [
+        "試験の不合格を何度も経験",
+        "試験の不合格を何度も経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "bd2a1cad196e638e",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L06",
+      "branch_id": "T02-B06",
+      "label_short_ja": "オンライン学習で機会を得た",
+      "description_ja": "オンライン学習で機会を得た",
+      "search_terms_ja": [
+        "オンライン学習で機会を得た"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8b2b0f36d59b6c66",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L07",
+      "branch_id": "T02-B06",
+      "label_short_ja": "年齢を気にして一歩を迷った",
+      "description_ja": "年齢を気にして一歩を迷った",
+      "search_terms_ja": [
+        "年齢を気にして一歩を迷った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "4762e736a8027b85",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L08",
+      "branch_id": "T02-B06",
+      "label_short_ja": "学び直しで転職・復職",
+      "description_ja": "学び直しで転職や復職につながった",
+      "search_terms_ja": [
+        "学び直しで転職や復職につながった",
+        "学び直しで転職・復職"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d7fff88c552e905f",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L09",
+      "branch_id": "T02-B06",
+      "label_short_ja": "必要に迫られ未知を学んだ",
+      "description_ja": "必要に迫られて未知の分野を学んだ",
+      "search_terms_ja": [
+        "必要に迫られて未知の分野を学んだ",
+        "必要に迫られ未知を学んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d5b368f0b3bb0356",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B06-L10",
+      "branch_id": "T02-B06",
+      "label_short_ja": "学ぶこと自体を楽しめる",
+      "description_ja": "学ぶこと自体を楽しめるようになった",
+      "search_terms_ja": [
+        "学ぶこと自体を楽しめるようになった",
+        "学ぶこと自体を楽しめる"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5bc311a7a9560467",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L01",
+      "branch_id": "T02-B07",
+      "label_short_ja": "読書から多くを学んだ",
+      "description_ja": "読書から多くを学んだ",
+      "search_terms_ja": [
+        "読書から多くを学んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1ae409a20233dc29",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L02",
+      "branch_id": "T02-B07",
+      "label_short_ja": "手を動かすと理解しやすい",
+      "description_ja": "手を動かすと理解しやすい",
+      "search_terms_ja": [
+        "手を動かすと理解しやすい"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "e3f4e5d34b754bf1",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L03",
+      "branch_id": "T02-B07",
+      "label_short_ja": "人に教えることで理解が深まる",
+      "description_ja": "人に教えることで理解が深まる",
+      "search_terms_ja": [
+        "人に教えることで理解が深まる"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0850976ee3f16f9c",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L04",
+      "branch_id": "T02-B07",
+      "label_short_ja": "集中の波が大きい",
+      "description_ja": "集中の波が大きいと感じる",
+      "search_terms_ja": [
+        "集中の波が大きいと感じる",
+        "集中の波が大きい"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "33ef8dcb00685969",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L05",
+      "branch_id": "T02-B07",
+      "label_short_ja": "読み書きや計算に苦手さがある",
+      "description_ja": "読み書きや計算に苦手さがある",
+      "search_terms_ja": [
+        "読み書きや計算に苦手さがある"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8014eeb9c91b9587",
+      "visual_tags": [
+        "amber-ring",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L06",
+      "branch_id": "T02-B07",
+      "label_short_ja": "集団授業よりペースが合う",
+      "description_ja": "集団授業より自分のペースが合う",
+      "search_terms_ja": [
+        "集団授業よりペースが合う",
+        "集団授業より自分のペースが合う"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "95a580a746c11a39",
+      "visual_tags": [
+        "amber-ring",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L07",
+      "branch_id": "T02-B07",
+      "label_short_ja": "失敗を恐れて質問できなかった",
+      "description_ja": "失敗を恐れて質問できなかった",
+      "search_terms_ja": [
+        "失敗を恐れて質問できなかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ee93357a58d51574",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L08",
+      "branch_id": "T02-B07",
+      "label_short_ja": "競争より協力する学びが合う",
+      "description_ja": "競争より協力する学びが合う",
+      "search_terms_ja": [
+        "競争より協力する学びが合う"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "cfb90bc4b80f4c75",
+      "visual_tags": [
+        "river-jade",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L09",
+      "branch_id": "T02-B07",
+      "label_short_ja": "得意不得意の差が大きい",
+      "description_ja": "得意不得意の差が大きい",
+      "search_terms_ja": [
+        "得意不得意の差が大きい"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "6420be9fb38c55f5",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T02-B07-L10",
+      "branch_id": "T02-B07",
+      "label_short_ja": "合う学び方を発見",
+      "description_ja": "自分に合う学び方を後から見つけた",
+      "search_terms_ja": [
+        "合う学び方を発見",
+        "自分に合う学び方を後から見つけた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "3bd18e94ed5f9067",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L01",
+      "branch_id": "T03-B01",
+      "label_short_ja": "初収入を得て自信がついた",
+      "description_ja": "初めて収入を得て自信がついた",
+      "search_terms_ja": [
+        "初収入を得て自信がついた",
+        "初めて収入を得て自信がついた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b2cbe61aa1a4c583",
+      "visual_tags": [
+        "moon-silver",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L02",
+      "branch_id": "T03-B01",
+      "label_short_ja": "先輩や上司に育ててもらった",
+      "description_ja": "先輩や上司に育ててもらった",
+      "search_terms_ja": [
+        "先輩や上司に育ててもらった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "2d205ffaeefda48d",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L03",
+      "branch_id": "T03-B01",
+      "label_short_ja": "社会人のルールに戸惑った",
+      "description_ja": "社会人のルールに戸惑った",
+      "search_terms_ja": [
+        "社会人のルールに戸惑った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d1832126a4b797ec",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L04",
+      "branch_id": "T03-B01",
+      "label_short_ja": "希望と異なる配属を経験",
+      "description_ja": "希望と異なる配属を経験した",
+      "search_terms_ja": [
+        "希望と異なる配属を経験",
+        "希望と異なる配属を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7aafa6851c2a8c8f",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L05",
+      "branch_id": "T03-B01",
+      "label_short_ja": "仕事を覚えるのに苦労した",
+      "description_ja": "仕事を覚えるのに苦労した",
+      "search_terms_ja": [
+        "仕事を覚えるのに苦労した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "00459ec33eb0e2b2",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L06",
+      "branch_id": "T03-B01",
+      "label_short_ja": "ミスへの恐れが強かった",
+      "description_ja": "ミスへの恐れが強かった",
+      "search_terms_ja": [
+        "ミスへの恐れが強かった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0c50cc205616824f",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L07",
+      "branch_id": "T03-B01",
+      "label_short_ja": "同期とのつながりに助けられた",
+      "description_ja": "同期とのつながりに助けられた",
+      "search_terms_ja": [
+        "同期とのつながりに助けられた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f6c12dacef143cc2",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L08",
+      "branch_id": "T03-B01",
+      "label_short_ja": "早期離職を経験",
+      "description_ja": "早期離職を経験した",
+      "search_terms_ja": [
+        "早期離職を経験した",
+        "早期離職を経験"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "471f064c77480d7f",
+      "visual_tags": [
+        "summer-canopy",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L09",
+      "branch_id": "T03-B01",
+      "label_short_ja": "バイト経験が進路に影響",
+      "description_ja": "アルバイト経験が進路に影響した",
+      "search_terms_ja": [
+        "アルバイト経験が進路に影響した",
+        "バイト経験が進路に影響"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b603c16efada855d",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B01-L10",
+      "branch_id": "T03-B01",
+      "label_short_ja": "働く意味を初考えた",
+      "description_ja": "働く意味を初めて考えた",
+      "search_terms_ja": [
+        "働く意味を初めて考えた",
+        "働く意味を初考えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "c978907217002098",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L01",
+      "branch_id": "T03-B02",
+      "label_short_ja": "信頼できる同僚との出会い",
+      "description_ja": "信頼できる同僚に出会った",
+      "search_terms_ja": [
+        "信頼できる同僚に出会った",
+        "信頼できる同僚との出会い"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8bc240f45034590b",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L02",
+      "branch_id": "T03-B02",
+      "label_short_ja": "チームで大きな成果を出した",
+      "description_ja": "チームで大きな成果を出した",
+      "search_terms_ja": [
+        "チームで大きな成果を出した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "516780b45d14ca89",
+      "visual_tags": [
+        "river-jade",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L03",
+      "branch_id": "T03-B02",
+      "label_short_ja": "上司との相性に悩んだ",
+      "description_ja": "上司との相性に悩んだ",
+      "search_terms_ja": [
+        "上司との相性に悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "81a7f1e17de91ab0",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L04",
+      "branch_id": "T03-B02",
+      "label_short_ja": "ハラスメントを受けた",
+      "description_ja": "ハラスメントを受けたと感じた",
+      "search_terms_ja": [
+        "ハラスメントを受けた",
+        "ハラスメントを受けたと感じた"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "a9ed84cf1a8456d7",
+      "visual_tags": [
+        "summer-canopy",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L05",
+      "branch_id": "T03-B02",
+      "label_short_ja": "職場で孤立した経験",
+      "description_ja": "職場で孤立した経験がある",
+      "search_terms_ja": [
+        "職場で孤立した経験",
+        "職場で孤立した経験がある"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "8e56329e583e6731",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L06",
+      "branch_id": "T03-B02",
+      "label_short_ja": "後輩・部下を支えた",
+      "description_ja": "後輩や部下を支える立場になった",
+      "search_terms_ja": [
+        "後輩・部下を支えた",
+        "後輩や部下を支える立場になった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9b3f23423e763214",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L07",
+      "branch_id": "T03-B02",
+      "label_short_ja": "評価の不公平に納得できない",
+      "description_ja": "評価やえこひいきに納得できなかった",
+      "search_terms_ja": [
+        "評価やえこひいきに納得できなかった",
+        "評価の不公平に納得できない"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7d82d5388136adc0",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L08",
+      "branch_id": "T03-B02",
+      "label_short_ja": "意見の衝突から関係を修復した",
+      "description_ja": "意見の衝突から関係を修復した",
+      "search_terms_ja": [
+        "意見の衝突から関係を修復した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7a1515ae384febf2",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L09",
+      "branch_id": "T03-B02",
+      "label_short_ja": "心理的に安全な職場を経験",
+      "description_ja": "心理的に安全な職場を経験した",
+      "search_terms_ja": [
+        "心理的に安全な職場を経験",
+        "心理的に安全な職場を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1b8d917a0e87a328",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B02-L10",
+      "branch_id": "T03-B02",
+      "label_short_ja": "仕事と私生活を分離",
+      "description_ja": "仕事上の人間関係と私生活を分けている",
+      "search_terms_ja": [
+        "仕事と私生活を分離",
+        "仕事上の人間関係と私生活を分けている"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "56c94364eecfb10b",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L01",
+      "branch_id": "T03-B03",
+      "label_short_ja": "やりたい仕事を選んだ",
+      "description_ja": "やりたい仕事を選んだ",
+      "search_terms_ja": [
+        "やりたい仕事を選んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "4aa4bd1509872d0b",
+      "visual_tags": [
+        "river-jade",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L02",
+      "branch_id": "T03-B03",
+      "label_short_ja": "安定を優先して仕事を選んだ",
+      "description_ja": "安定を優先して仕事を選んだ",
+      "search_terms_ja": [
+        "安定を優先して仕事を選んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f0157069c34ef3af",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L03",
+      "branch_id": "T03-B03",
+      "label_short_ja": "家族の期待で進路決定",
+      "description_ja": "家族の期待に沿って進路を決めた",
+      "search_terms_ja": [
+        "家族の期待に沿って進路を決めた",
+        "家族の期待で進路決定"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "fa61ed5776cc4d37",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L04",
+      "branch_id": "T03-B03",
+      "label_short_ja": "転職で環境を変えた",
+      "description_ja": "転職で環境を変えた",
+      "search_terms_ja": [
+        "転職で環境を変えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "3f29ca5254f1a262",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L05",
+      "branch_id": "T03-B03",
+      "label_short_ja": "異業種への転身を経験",
+      "description_ja": "異業種への転身を経験した",
+      "search_terms_ja": [
+        "異業種への転身を経験した",
+        "異業種への転身を経験"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f9371e95e3e116ef",
+      "visual_tags": [
+        "river-jade",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L06",
+      "branch_id": "T03-B03",
+      "label_short_ja": "昇進や管理職になるか迷った",
+      "description_ja": "昇進や管理職になるか迷った",
+      "search_terms_ja": [
+        "昇進や管理職になるか迷った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9117f3710aa43beb",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L07",
+      "branch_id": "T03-B03",
+      "label_short_ja": "専門職として深める道を選んだ",
+      "description_ja": "専門職として深める道を選んだ",
+      "search_terms_ja": [
+        "専門職として深める道を選んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "032e52ac8d440e86",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L08",
+      "branch_id": "T03-B03",
+      "label_short_ja": "キャリアの停滞を感じた",
+      "description_ja": "キャリアの停滞を感じた",
+      "search_terms_ja": [
+        "キャリアの停滞を感じた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1b1fd72aa07f8f69",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L09",
+      "branch_id": "T03-B03",
+      "label_short_ja": "複数の仕事を組み合わせている",
+      "description_ja": "複数の仕事を組み合わせている",
+      "search_terms_ja": [
+        "複数の仕事を組み合わせている"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a4f4f4345aad15d2",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B03-L10",
+      "branch_id": "T03-B03",
+      "label_short_ja": "肩書きに頼らない働き方を探",
+      "description_ja": "肩書きに頼らない働き方を探している",
+      "search_terms_ja": [
+        "肩書きに頼らない働き方を探している",
+        "肩書きに頼らない働き方を探"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8c6488431f8c1c23",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L01",
+      "branch_id": "T03-B04",
+      "label_short_ja": "仕事に大きなやりがいを感じる",
+      "description_ja": "仕事に大きなやりがいを感じる",
+      "search_terms_ja": [
+        "仕事に大きなやりがいを感じる"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "278236f8f52eeddd",
+      "visual_tags": [
+        "river-jade",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L02",
+      "branch_id": "T03-B04",
+      "label_short_ja": "長時間労働で生活が崩れた",
+      "description_ja": "長時間労働で生活が崩れた",
+      "search_terms_ja": [
+        "長時間労働で生活が崩れた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ca8bb92c16ef8bf6",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L03",
+      "branch_id": "T03-B04",
+      "label_short_ja": "在宅勤務で暮らしが変わった",
+      "description_ja": "在宅勤務で暮らしが変わった",
+      "search_terms_ja": [
+        "在宅勤務で暮らしが変わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "04511698c2470b64",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L04",
+      "branch_id": "T03-B04",
+      "label_short_ja": "育児と仕事の両立に悩んだ",
+      "description_ja": "育児と仕事の両立に悩んだ",
+      "search_terms_ja": [
+        "育児と仕事の両立に悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "566c5028510ae88f",
+      "visual_tags": [
+        "amber-ring",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L05",
+      "branch_id": "T03-B04",
+      "label_short_ja": "介護と仕事の両立に悩んだ",
+      "description_ja": "介護と仕事の両立に悩んだ",
+      "search_terms_ja": [
+        "介護と仕事の両立に悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "52d0f6eb5dc7d506",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L06",
+      "branch_id": "T03-B04",
+      "label_short_ja": "休職して回復を優先した",
+      "description_ja": "休職して回復を優先した",
+      "search_terms_ja": [
+        "休職して回復を優先した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "aed6a73b387df50d",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L07",
+      "branch_id": "T03-B04",
+      "label_short_ja": "時短や柔軟な働き方を選んだ",
+      "description_ja": "時短や柔軟な働き方を選んだ",
+      "search_terms_ja": [
+        "時短や柔軟な働き方を選んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "bd10ca55a68a51a6",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L08",
+      "branch_id": "T03-B04",
+      "label_short_ja": "働きすぎない境界線を学んだ",
+      "description_ja": "働きすぎない境界線を学んだ",
+      "search_terms_ja": [
+        "働きすぎない境界線を学んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "4e46c48a3222044f",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L09",
+      "branch_id": "T03-B04",
+      "label_short_ja": "地方や海外で働いた",
+      "description_ja": "地方や海外で働いた",
+      "search_terms_ja": [
+        "地方や海外で働いた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7acb41351ccb064e",
+      "visual_tags": [
+        "moon-silver",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B04-L10",
+      "branch_id": "T03-B04",
+      "label_short_ja": "仕事以外の時間を大切に",
+      "description_ja": "仕事以外の時間を大切にしている",
+      "search_terms_ja": [
+        "仕事以外の時間を大切に",
+        "仕事以外の時間を大切にしている"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "31ec0ba8ba5cb1e7",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L01",
+      "branch_id": "T03-B05",
+      "label_short_ja": "大きな失敗から立て直した",
+      "description_ja": "大きな失敗から立て直した",
+      "search_terms_ja": [
+        "大きな失敗から立て直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5abc9dfa172ca212",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L02",
+      "branch_id": "T03-B05",
+      "label_short_ja": "解雇や雇止めを経験",
+      "description_ja": "解雇や雇止めを経験した",
+      "search_terms_ja": [
+        "解雇や雇止めを経験した",
+        "解雇や雇止めを経験"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "df318d73a0654592",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L03",
+      "branch_id": "T03-B05",
+      "label_short_ja": "事業や企画の失敗を経験",
+      "description_ja": "事業や企画の失敗を経験した",
+      "search_terms_ja": [
+        "事業や企画の失敗を経験",
+        "事業や企画の失敗を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5e7c50a5865aeb47",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L04",
+      "branch_id": "T03-B05",
+      "label_short_ja": "期待された成果を出せず悩んだ",
+      "description_ja": "期待された成果を出せず悩んだ",
+      "search_terms_ja": [
+        "期待された成果を出せず悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "2bd70612f6cc4eef",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L05",
+      "branch_id": "T03-B05",
+      "label_short_ja": "燃え尽きて仕事を離れた",
+      "description_ja": "燃え尽きて仕事を離れた",
+      "search_terms_ja": [
+        "燃え尽きて仕事を離れた"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "12eb6131e4fe80a1",
+      "visual_tags": [
+        "river-jade",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L06",
+      "branch_id": "T03-B05",
+      "label_short_ja": "空白期間を経て復職した",
+      "description_ja": "空白期間を経て復職した",
+      "search_terms_ja": [
+        "空白期間を経て復職した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "4c5e84ca19ee6280",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L07",
+      "branch_id": "T03-B05",
+      "label_short_ja": "再就職活動が長引いた",
+      "description_ja": "再就職活動が長引いた",
+      "search_terms_ja": [
+        "再就職活動が長引いた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "46b9f30ea83689f0",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L08",
+      "branch_id": "T03-B05",
+      "label_short_ja": "失敗を周囲に話せず抱えた",
+      "description_ja": "失敗を周囲に話せず抱えた",
+      "search_terms_ja": [
+        "失敗を周囲に話せず抱えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1781b9a61e4f38d0",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L09",
+      "branch_id": "T03-B05",
+      "label_short_ja": "支援制度や相談先に助けられた",
+      "description_ja": "支援制度や相談先に助けられた",
+      "search_terms_ja": [
+        "支援制度や相談先に助けられた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "574788f7be2106e6",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B05-L10",
+      "branch_id": "T03-B05",
+      "label_short_ja": "過去の経験を仕事に活用",
+      "description_ja": "過去の経験を次の仕事に生かした",
+      "search_terms_ja": [
+        "過去の経験を次の仕事に生かした",
+        "過去の経験を仕事に活用"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1cf6efd5fb127573",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L01",
+      "branch_id": "T03-B06",
+      "label_short_ja": "収入が安定して安心を得た",
+      "description_ja": "収入が安定して安心を得た",
+      "search_terms_ja": [
+        "収入が安定して安心を得た"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "88de54dc255c2195",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L02",
+      "branch_id": "T03-B06",
+      "label_short_ja": "収入の少なさに悩んだ",
+      "description_ja": "収入の少なさに悩んだ",
+      "search_terms_ja": [
+        "収入の少なさに悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9a0e77930f48b47f",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L03",
+      "branch_id": "T03-B06",
+      "label_short_ja": "家計管理を学び直した",
+      "description_ja": "家計管理を学び直した",
+      "search_terms_ja": [
+        "家計管理を学び直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "2413a211cb3db718",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L04",
+      "branch_id": "T03-B06",
+      "label_short_ja": "奨学金やローンの返済を継続",
+      "description_ja": "奨学金やローンの返済を続けている",
+      "search_terms_ja": [
+        "奨学金やローンの返済を継続",
+        "奨学金やローンの返済を続けている"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "31a9966538aaa75f",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L05",
+      "branch_id": "T03-B06",
+      "label_short_ja": "失業や収入減を経験",
+      "description_ja": "失業や収入減を経験した",
+      "search_terms_ja": [
+        "失業や収入減を経験",
+        "失業や収入減を経験した"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "3b5b21d52c890e6a",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L06",
+      "branch_id": "T03-B06",
+      "label_short_ja": "家族を経済的に支えた",
+      "description_ja": "家族を経済的に支えた",
+      "search_terms_ja": [
+        "家族を経済的に支えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ff72b2e11c893f73",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L07",
+      "branch_id": "T03-B06",
+      "label_short_ja": "貯蓄ができず不安を感じる",
+      "description_ja": "貯蓄ができず不安を感じる",
+      "search_terms_ja": [
+        "貯蓄ができず不安を感じる"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "23978f93835df5c0",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L08",
+      "branch_id": "T03-B06",
+      "label_short_ja": "副業で収入源を増やした",
+      "description_ja": "副業で収入源を増やした",
+      "search_terms_ja": [
+        "副業で収入源を増やした"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "69a61b381f57e1b0",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L09",
+      "branch_id": "T03-B06",
+      "label_short_ja": "家族と金銭観が違う",
+      "description_ja": "お金に関する家族観の違いに悩んだ",
+      "search_terms_ja": [
+        "家族と金銭観が違う",
+        "お金に関する家族観の違いに悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "e5cdc4c7e4bd19b1",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B06-L10",
+      "branch_id": "T03-B06",
+      "label_short_ja": "豊かさの基準を決め直した",
+      "description_ja": "豊かさの基準を自分で決め直した",
+      "search_terms_ja": [
+        "豊かさの基準を自分で決め直した",
+        "豊かさの基準を決め直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a1c6a1a53e901d39",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L01",
+      "branch_id": "T03-B07",
+      "label_short_ja": "自分の事業を開始",
+      "description_ja": "自分の事業を始めた",
+      "search_terms_ja": [
+        "自分の事業を開始",
+        "自分の事業を始めた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "11e172c8946247fd",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L02",
+      "branch_id": "T03-B07",
+      "label_short_ja": "フリーランスとして働いた",
+      "description_ja": "フリーランスとして働いた",
+      "search_terms_ja": [
+        "フリーランスとして働いた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9aaac12cabff15e2",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L03",
+      "branch_id": "T03-B07",
+      "label_short_ja": "顧客を得るまで苦労した",
+      "description_ja": "顧客を得るまで苦労した",
+      "search_terms_ja": [
+        "顧客を得るまで苦労した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a5262855d0a48558",
+      "visual_tags": [
+        "river-jade",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L04",
+      "branch_id": "T03-B07",
+      "label_short_ja": "仲間と事業を立ち上げた",
+      "description_ja": "仲間と事業を立ち上げた",
+      "search_terms_ja": [
+        "仲間と事業を立ち上げた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7b7be5e3d61054b8",
+      "visual_tags": [
+        "river-jade",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L05",
+      "branch_id": "T03-B07",
+      "label_short_ja": "資金繰りの不安を経験",
+      "description_ja": "資金繰りの不安を経験した",
+      "search_terms_ja": [
+        "資金繰りの不安を経験した",
+        "資金繰りの不安を経験"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b83fb6a684e56cc9",
+      "visual_tags": [
+        "amber-ring",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L06",
+      "branch_id": "T03-B07",
+      "label_short_ja": "事業の方向転換をした",
+      "description_ja": "事業の方向転換をした",
+      "search_terms_ja": [
+        "事業の方向転換をした"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ee6753e43631e5de",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L07",
+      "branch_id": "T03-B07",
+      "label_short_ja": "創作活動を仕事にした",
+      "description_ja": "創作活動を仕事にした",
+      "search_terms_ja": [
+        "創作活動を仕事にした"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "fc528776c3aac46d",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L08",
+      "branch_id": "T03-B07",
+      "label_short_ja": "仕事と表現の間で迷った",
+      "description_ja": "仕事と表現の間で迷った",
+      "search_terms_ja": [
+        "仕事と表現の間で迷った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "05042bf8d12875ef",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L09",
+      "branch_id": "T03-B07",
+      "label_short_ja": "一度やめた挑戦を再開した",
+      "description_ja": "一度やめた挑戦を再開した",
+      "search_terms_ja": [
+        "一度やめた挑戦を再開した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "592fdc84afb2be32",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T03-B07-L10",
+      "branch_id": "T03-B07",
+      "label_short_ja": "小さく長く続ける形を発見",
+      "description_ja": "小さく長く続ける形を見つけた",
+      "search_terms_ja": [
+        "小さく長く続ける形を見つけた",
+        "小さく長く続ける形を発見"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "156b9247a5d1e8b6",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L01",
+      "branch_id": "T04-B01",
+      "label_short_ja": "長く付き合う親友がいる",
+      "description_ja": "長く付き合う親友がいる",
+      "search_terms_ja": [
+        "長く付き合う親友がいる"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "78633d71b831a6e4",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L02",
+      "branch_id": "T04-B01",
+      "label_short_ja": "困った時に友人に救われた",
+      "description_ja": "困った時に友人に救われた",
+      "search_terms_ja": [
+        "困った時に友人に救われた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5321740786b01a80",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L03",
+      "branch_id": "T04-B01",
+      "label_short_ja": "環境の変化で疎遠になった",
+      "description_ja": "環境の変化で疎遠になった",
+      "search_terms_ja": [
+        "環境の変化で疎遠になった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ede679d8e838524e",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L04",
+      "branch_id": "T04-B01",
+      "label_short_ja": "友人関係で裏切りを感じた",
+      "description_ja": "友人関係で裏切りを感じた",
+      "search_terms_ja": [
+        "友人関係で裏切りを感じた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "902dc7b767891bed",
+      "visual_tags": [
+        "river-jade",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L05",
+      "branch_id": "T04-B01",
+      "label_short_ja": "仲間内で孤立した経験",
+      "description_ja": "仲間内で孤立した経験がある",
+      "search_terms_ja": [
+        "仲間内で孤立した経験",
+        "仲間内で孤立した経験がある"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "56c25a7ff62fc704",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L06",
+      "branch_id": "T04-B01",
+      "label_short_ja": "相手に合わせすぎて疲れた",
+      "description_ja": "相手に合わせすぎて疲れた",
+      "search_terms_ja": [
+        "相手に合わせすぎて疲れた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a8d6d84fe89393b6",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L07",
+      "branch_id": "T04-B01",
+      "label_short_ja": "新しい友人ができた",
+      "description_ja": "大人になって新しい友人ができた",
+      "search_terms_ja": [
+        "新しい友人ができた",
+        "大人になって新しい友人ができた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9f6231a7645c91c9",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L08",
+      "branch_id": "T04-B01",
+      "label_short_ja": "オンラインで親友と出会った",
+      "description_ja": "オンラインで大切な友人に出会った",
+      "search_terms_ja": [
+        "オンラインで大切な友人に出会った",
+        "オンラインで親友と出会った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ca4d633ab3dbee63",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L09",
+      "branch_id": "T04-B01",
+      "label_short_ja": "友情の終わりを受け入れた",
+      "description_ja": "友情の終わりを受け入れた",
+      "search_terms_ja": [
+        "友情の終わりを受け入れた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b3c0c61a0d40affc",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B01-L10",
+      "branch_id": "T04-B01",
+      "label_short_ja": "少人数の深い関係を好む",
+      "description_ja": "少人数の深い関係を好む",
+      "search_terms_ja": [
+        "少人数の深い関係を好む"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "58bad6a8a44e1583",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L01",
+      "branch_id": "T04-B02",
+      "label_short_ja": "初安心できる恋愛を経験",
+      "description_ja": "初めて安心できる恋愛を経験した",
+      "search_terms_ja": [
+        "初安心できる恋愛を経験",
+        "初めて安心できる恋愛を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "785c8e254d950d01",
+      "visual_tags": [
+        "summer-canopy",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L02",
+      "branch_id": "T04-B02",
+      "label_short_ja": "片思いから多くを学んだ",
+      "description_ja": "片思いから多くを学んだ",
+      "search_terms_ja": [
+        "片思いから多くを学んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ff82ef8ffbfc8342",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L03",
+      "branch_id": "T04-B02",
+      "label_short_ja": "失恋から立ち直った",
+      "description_ja": "失恋から立ち直った",
+      "search_terms_ja": [
+        "失恋から立ち直った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "74bab31747fac8e5",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L04",
+      "branch_id": "T04-B02",
+      "label_short_ja": "依存的な関係に悩んだ",
+      "description_ja": "依存的な関係に悩んだ",
+      "search_terms_ja": [
+        "依存的な関係に悩んだ"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "d5e08539098f986d",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L05",
+      "branch_id": "T04-B02",
+      "label_short_ja": "束縛や価値観の違いに苦しんだ",
+      "description_ja": "束縛や価値観の違いに苦しんだ",
+      "search_terms_ja": [
+        "束縛や価値観の違いに苦しんだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "03b95995115c315e",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L06",
+      "branch_id": "T04-B02",
+      "label_short_ja": "遠距離の関係を続けた",
+      "description_ja": "遠距離の関係を続けた",
+      "search_terms_ja": [
+        "遠距離の関係を続けた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b494ffa48e7f3c97",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L07",
+      "branch_id": "T04-B02",
+      "label_short_ja": "関係を終える決断をした",
+      "description_ja": "関係を終える決断をした",
+      "search_terms_ja": [
+        "関係を終える決断をした"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "e21f1d4c76afc634",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L08",
+      "branch_id": "T04-B02",
+      "label_short_ja": "恋愛しない生き方",
+      "description_ja": "恋愛をしない生き方を選んでいる",
+      "search_terms_ja": [
+        "恋愛しない生き方",
+        "恋愛をしない生き方を選んでいる"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d9aa1a39064f9475",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L09",
+      "branch_id": "T04-B02",
+      "label_short_ja": "自分らしさを理解された",
+      "description_ja": "自分のあり方を理解してくれる人に出会った",
+      "search_terms_ja": [
+        "自分らしさを理解された",
+        "自分のあり方を理解してくれる人に出会った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "37a6d4030e59e689",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B02-L10",
+      "branch_id": "T04-B02",
+      "label_short_ja": "親密さと自分時間を両立",
+      "description_ja": "親密さと自分の時間の両方を大切にしている",
+      "search_terms_ja": [
+        "親密さと自分の時間の両方を大切にしている",
+        "親密さと自分時間を両立"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "986780aa1a5d4cfb",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L01",
+      "branch_id": "T04-B03",
+      "label_short_ja": "結婚で安心を得た",
+      "description_ja": "結婚によって安心できる基盤ができた",
+      "search_terms_ja": [
+        "結婚で安心を得た",
+        "結婚によって安心できる基盤ができた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "15c1dfec4599f5a7",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L02",
+      "branch_id": "T04-B03",
+      "label_short_ja": "結婚生活の現実に戸惑った",
+      "description_ja": "結婚生活の現実に戸惑った",
+      "search_terms_ja": [
+        "結婚生活の現実に戸惑った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "133a56cf9bb83dcf",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L03",
+      "branch_id": "T04-B03",
+      "label_short_ja": "子どもや仕事意見が分かれた",
+      "description_ja": "子どもや仕事について意見が分かれた",
+      "search_terms_ja": [
+        "子どもや仕事について意見が分かれた",
+        "子どもや仕事意見が分かれた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "05cf07da39c9ae54",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L04",
+      "branch_id": "T04-B03",
+      "label_short_ja": "夫婦で困難を乗り越えた",
+      "description_ja": "夫婦で困難を乗り越えた",
+      "search_terms_ja": [
+        "夫婦で困難を乗り越えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "89decdf5922a600a",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L05",
+      "branch_id": "T04-B03",
+      "label_short_ja": "別居を経験",
+      "description_ja": "別居を経験した",
+      "search_terms_ja": [
+        "別居を経験",
+        "別居を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "368b50dcb8ce99b4",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L06",
+      "branch_id": "T04-B03",
+      "label_short_ja": "離婚を経験",
+      "description_ja": "離婚を経験した",
+      "search_terms_ja": [
+        "離婚を経験",
+        "離婚を経験した"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "f7db259930e31bd1",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L07",
+      "branch_id": "T04-B03",
+      "label_short_ja": "離婚後の生活を立て直した",
+      "description_ja": "離婚後の生活を立て直した",
+      "search_terms_ja": [
+        "離婚後の生活を立て直した"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "98b35781e793fd23",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L08",
+      "branch_id": "T04-B03",
+      "label_short_ja": "再婚や新しい関係を築いた",
+      "description_ja": "再婚や新しい関係を築いた",
+      "search_terms_ja": [
+        "再婚や新しい関係を築いた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ce92630c39559b94",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L09",
+      "branch_id": "T04-B03",
+      "label_short_ja": "自分たちに合う事実婚",
+      "description_ja": "事実婚など自分たちに合う形を選んだ",
+      "search_terms_ja": [
+        "事実婚など自分たちに合う形を選んだ",
+        "自分たちに合う事実婚"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8759c4bc39d10ff4",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B03-L10",
+      "branch_id": "T04-B03",
+      "label_short_ja": "結婚しない選択を大切に",
+      "description_ja": "結婚しない選択を大切にしている",
+      "search_terms_ja": [
+        "結婚しない選択を大切に",
+        "結婚しない選択を大切にしている"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "57a99407da12bc09",
+      "visual_tags": [
+        "moon-silver",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L01",
+      "branch_id": "T04-B04",
+      "label_short_ja": "地域活動に居場所を発見",
+      "description_ja": "地域活動に居場所を見つけた",
+      "search_terms_ja": [
+        "地域活動に居場所を発見",
+        "地域活動に居場所を見つけた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9f3dfa324e77011f",
+      "visual_tags": [
+        "petal-dawn",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L02",
+      "branch_id": "T04-B04",
+      "label_short_ja": "趣味の集まりで仲間ができた",
+      "description_ja": "趣味の集まりで仲間ができた",
+      "search_terms_ja": [
+        "趣味の集まりで仲間ができた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "43bdda01f6e5cdcc",
+      "visual_tags": [
+        "river-jade",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L03",
+      "branch_id": "T04-B04",
+      "label_short_ja": "ボランティアで役割を得た",
+      "description_ja": "ボランティアで役割を得た",
+      "search_terms_ja": [
+        "ボランティアで役割を得た"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7065a58f72ed7638",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L04",
+      "branch_id": "T04-B04",
+      "label_short_ja": "近所付き合いに助けられた",
+      "description_ja": "近所付き合いに助けられた",
+      "search_terms_ja": [
+        "近所付き合いに助けられた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "03a194c5f2f59e86",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L05",
+      "branch_id": "T04-B04",
+      "label_short_ja": "地域の慣習になじめなかった",
+      "description_ja": "地域の慣習になじめなかった",
+      "search_terms_ja": [
+        "地域の慣習になじめなかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "70ddbb9edf115934",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L06",
+      "branch_id": "T04-B04",
+      "label_short_ja": "移住先で孤独を感じた",
+      "description_ja": "移住先で孤独を感じた",
+      "search_terms_ja": [
+        "移住先で孤独を感じた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0117afe535050481",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L07",
+      "branch_id": "T04-B04",
+      "label_short_ja": "新しい土地で関係を築き直した",
+      "description_ja": "新しい土地で関係を築き直した",
+      "search_terms_ja": [
+        "新しい土地で関係を築き直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b7f1d3c28ea26e14",
+      "visual_tags": [
+        "summer-canopy",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L08",
+      "branch_id": "T04-B04",
+      "label_short_ja": "オンラインの場に支えられた",
+      "description_ja": "オンラインコミュニティに支えられた",
+      "search_terms_ja": [
+        "オンラインコミュニティに支えられた",
+        "オンラインの場に支えられた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d984a5e1eb7d08d9",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L09",
+      "branch_id": "T04-B04",
+      "label_short_ja": "運営側として場を作った",
+      "description_ja": "運営側として場を作った",
+      "search_terms_ja": [
+        "運営側として場を作った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b2791df52ae46aea",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B04-L10",
+      "branch_id": "T04-B04",
+      "label_short_ja": "コミュニティから離脱",
+      "description_ja": "コミュニティから距離を置く決断をした",
+      "search_terms_ja": [
+        "コミュニティから離脱",
+        "コミュニティから距離を置く決断をした"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a7fcd31d11ba2810",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L01",
+      "branch_id": "T04-B05",
+      "label_short_ja": "一人で過ごす時間が好きだ",
+      "description_ja": "一人で過ごす時間が好きだ",
+      "search_terms_ja": [
+        "一人で過ごす時間が好きだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7ebe88f133875b07",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L02",
+      "branch_id": "T04-B05",
+      "label_short_ja": "孤独を自由だ",
+      "description_ja": "孤独を自由だと感じる",
+      "search_terms_ja": [
+        "孤独を自由だと感じる",
+        "孤独を自由だ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "c0a1db0c6fa511b2",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L03",
+      "branch_id": "T04-B05",
+      "label_short_ja": "話せる相手がいない時期",
+      "description_ja": "話せる相手がいない時期があった",
+      "search_terms_ja": [
+        "話せる相手がいない時期",
+        "話せる相手がいない時期があった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b6e82cf5fa3ddb67",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L04",
+      "branch_id": "T04-B05",
+      "label_short_ja": "人の中にいても孤独だった",
+      "description_ja": "人の中にいても孤独だった",
+      "search_terms_ja": [
+        "人の中にいても孤独だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b4e5e9fb32f46868",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L05",
+      "branch_id": "T04-B05",
+      "label_short_ja": "連絡を取ること自体が負担",
+      "description_ja": "連絡を取ること自体が負担だった",
+      "search_terms_ja": [
+        "連絡を取ること自体が負担",
+        "連絡を取ること自体が負担だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b52b00e5e1b9b62b",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L06",
+      "branch_id": "T04-B05",
+      "label_short_ja": "ひとり暮らしで自分を知った",
+      "description_ja": "ひとり暮らしで自分を知った",
+      "search_terms_ja": [
+        "ひとり暮らしで自分を知った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "18cb2e8b9592af7f",
+      "visual_tags": [
+        "moon-silver",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L07",
+      "branch_id": "T04-B05",
+      "label_short_ja": "孤独から相談先を探した",
+      "description_ja": "孤独をきっかけに相談先を探した",
+      "search_terms_ja": [
+        "孤独から相談先を探した",
+        "孤独をきっかけに相談先を探した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "c3c21435d0cb5719",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L08",
+      "branch_id": "T04-B05",
+      "label_short_ja": "小さなつながりから戻れた",
+      "description_ja": "小さなつながりから戻れた",
+      "search_terms_ja": [
+        "小さなつながりから戻れた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a539fae262a328fc",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L09",
+      "branch_id": "T04-B05",
+      "label_short_ja": "無理に群れないことを選んだ",
+      "description_ja": "無理に群れないことを選んだ",
+      "search_terms_ja": [
+        "無理に群れないことを選んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "bc4531602e6660ea",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B05-L10",
+      "branch_id": "T04-B05",
+      "label_short_ja": "孤独とつながりを調整中",
+      "description_ja": "ひとりとつながりのバランスを探している",
+      "search_terms_ja": [
+        "孤独とつながりを調整中",
+        "ひとりとつながりのバランスを探している"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "220e253b32533139",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L01",
+      "branch_id": "T04-B06",
+      "label_short_ja": "人を信頼することが得意だ",
+      "description_ja": "人を信頼することが得意だ",
+      "search_terms_ja": [
+        "人を信頼することが得意だ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ac7746a4d9fa3b96",
+      "visual_tags": [
+        "river-jade",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L02",
+      "branch_id": "T04-B06",
+      "label_short_ja": "頼ることを少しずつ学んだ",
+      "description_ja": "頼ることを少しずつ学んだ",
+      "search_terms_ja": [
+        "頼ることを少しずつ学んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "91a509f37df59544",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L03",
+      "branch_id": "T04-B06",
+      "label_short_ja": "断ることが苦手だった",
+      "description_ja": "断ることが苦手だった",
+      "search_terms_ja": [
+        "断ることが苦手だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "99a35a6597c90703",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L04",
+      "branch_id": "T04-B06",
+      "label_short_ja": "秘密を破られて傷ついた",
+      "description_ja": "秘密を破られて傷ついた",
+      "search_terms_ja": [
+        "秘密を破られて傷ついた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f07c84b583fe606e",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L05",
+      "branch_id": "T04-B06",
+      "label_short_ja": "相手を優先しすぎて疲れた",
+      "description_ja": "相手を優先しすぎて疲れた",
+      "search_terms_ja": [
+        "相手を優先しすぎて疲れた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1e838a31b4fc9311",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L06",
+      "branch_id": "T04-B06",
+      "label_short_ja": "距離を置くことで自分を守った",
+      "description_ja": "距離を置くことで自分を守った",
+      "search_terms_ja": [
+        "距離を置くことで自分を守った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "caf0bcc61bc5f452",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L07",
+      "branch_id": "T04-B06",
+      "label_short_ja": "謝罪して関係を修復した",
+      "description_ja": "謝罪して関係を修復した",
+      "search_terms_ja": [
+        "謝罪して関係を修復した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9323042cd46e5faf",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L08",
+      "branch_id": "T04-B06",
+      "label_short_ja": "許せない気持ちを抱えている",
+      "description_ja": "許せない気持ちを抱えている",
+      "search_terms_ja": [
+        "許せない気持ちを抱えている"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5fdd675f88393765",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L09",
+      "branch_id": "T04-B06",
+      "label_short_ja": "健全な境界線を学んだ",
+      "description_ja": "健全な境界線を学んだ",
+      "search_terms_ja": [
+        "健全な境界線を学んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "84a6b2663c631a62",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B06-L10",
+      "branch_id": "T04-B06",
+      "label_short_ja": "相手と違うまま尊重し合える",
+      "description_ja": "相手と違うまま尊重し合えるようになった",
+      "search_terms_ja": [
+        "相手と違うまま尊重し合えるようになった",
+        "相手と違うまま尊重し合える"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "c4dd3cf52aea1500",
+      "visual_tags": [
+        "spring-mist",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L01",
+      "branch_id": "T04-B07",
+      "label_short_ja": "自分らしさを隠過ごした時期",
+      "description_ja": "自分らしさを隠して過ごした時期がある",
+      "search_terms_ja": [
+        "自分らしさを隠過ごした時期",
+        "自分らしさを隠して過ごした時期がある"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "df8c34321e2188d0",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L02",
+      "branch_id": "T04-B07",
+      "label_short_ja": "外見や背景への偏見を感じた",
+      "description_ja": "外見や背景への偏見を感じた",
+      "search_terms_ja": [
+        "外見や背景への偏見を感じた"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "76c836d7855432ed",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L03",
+      "branch_id": "T04-B07",
+      "label_short_ja": "少数派だ場面があった",
+      "description_ja": "少数派だと感じる場面があった",
+      "search_terms_ja": [
+        "少数派だ場面があった",
+        "少数派だと感じる場面があった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0f54e11d45f2659f",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L04",
+      "branch_id": "T04-B07",
+      "label_short_ja": "周囲の決めつけに苦しんだ",
+      "description_ja": "周囲の決めつけに苦しんだ",
+      "search_terms_ja": [
+        "周囲の決めつけに苦しんだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7ade263260298e74",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L05",
+      "branch_id": "T04-B07",
+      "label_short_ja": "理解者に出会い安心した",
+      "description_ja": "理解者に出会い安心した",
+      "search_terms_ja": [
+        "理解者に出会い安心した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "87fd615c94160c63",
+      "visual_tags": [
+        "amber-ring",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L06",
+      "branch_id": "T04-B07",
+      "label_short_ja": "自分の経験を言葉にして伝えた",
+      "description_ja": "自分の経験を言葉にして伝えた",
+      "search_terms_ja": [
+        "自分の経験を言葉にして伝えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "63ac604855f4dbe5",
+      "visual_tags": [
+        "summer-canopy",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L07",
+      "branch_id": "T04-B07",
+      "label_short_ja": "偏見に対して声を上げた",
+      "description_ja": "偏見に対して声を上げた",
+      "search_terms_ja": [
+        "偏見に対して声を上げた"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "4df0b9b8c23a5c59",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L08",
+      "branch_id": "T04-B07",
+      "label_short_ja": "支援する側として関わった",
+      "description_ja": "支援する側として関わった",
+      "search_terms_ja": [
+        "支援する側として関わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "da9655df44a59a21",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L09",
+      "branch_id": "T04-B07",
+      "label_short_ja": "安心できる場を選択",
+      "description_ja": "安心できる場を自分で選ぶようになった",
+      "search_terms_ja": [
+        "安心できる場を選択",
+        "安心できる場を自分で選ぶようになった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "83664bace0856553",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T04-B07-L10",
+      "branch_id": "T04-B07",
+      "label_short_ja": "違いを強みとして受け止め開始",
+      "description_ja": "違いを強みとして受け止め始めた",
+      "search_terms_ja": [
+        "違いを強みとして受け止め開始",
+        "違いを強みとして受け止め始めた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "efc3183bbccec8f7",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L01",
+      "branch_id": "T05-B01",
+      "label_short_ja": "健康のありがたさを実感した",
+      "description_ja": "健康のありがたさを実感した",
+      "search_terms_ja": [
+        "健康のありがたさを実感した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "80aebc84b169f9a0",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L02",
+      "branch_id": "T05-B01",
+      "label_short_ja": "慢性的な不調と付き合っている",
+      "description_ja": "慢性的な不調と付き合っている",
+      "search_terms_ja": [
+        "慢性的な不調と付き合っている"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1faaa136d951d50a",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L03",
+      "branch_id": "T05-B01",
+      "label_short_ja": "大きな病気や入院を経験",
+      "description_ja": "大きな病気や入院を経験した",
+      "search_terms_ja": [
+        "大きな病気や入院を経験した",
+        "大きな病気や入院を経験"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "de0d6e64e3365ac8",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L04",
+      "branch_id": "T05-B01",
+      "label_short_ja": "手術や治療を乗り越えた",
+      "description_ja": "手術や治療を乗り越えた",
+      "search_terms_ja": [
+        "手術や治療を乗り越えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "21c48047a20b0f22",
+      "visual_tags": [
+        "petal-dawn",
+        "tall-spire",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L05",
+      "branch_id": "T05-B01",
+      "label_short_ja": "痛みを理解されにくい",
+      "description_ja": "痛みを周囲に理解されにくかった",
+      "search_terms_ja": [
+        "痛みを理解されにくい",
+        "痛みを周囲に理解されにくかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "aa4ec8ca49552376",
+      "visual_tags": [
+        "amber-ring",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L06",
+      "branch_id": "T05-B01",
+      "label_short_ja": "障害や身体特性と暮ら",
+      "description_ja": "障害や身体特性と暮らしている",
+      "search_terms_ja": [
+        "障害や身体特性と暮らしている",
+        "障害や身体特性と暮ら"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "98104bfe3c1eabf0",
+      "visual_tags": [
+        "petal-dawn",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L07",
+      "branch_id": "T05-B01",
+      "label_short_ja": "食事や運動の習慣を見直した",
+      "description_ja": "食事や運動の習慣を見直した",
+      "search_terms_ja": [
+        "食事や運動の習慣を見直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "19d1aabd762eca61",
+      "visual_tags": [
+        "river-jade",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L08",
+      "branch_id": "T05-B01",
+      "label_short_ja": "回復に時間がかかった",
+      "description_ja": "回復に時間がかかった",
+      "search_terms_ja": [
+        "回復に時間がかかった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "104d45e34ca231db",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L09",
+      "branch_id": "T05-B01",
+      "label_short_ja": "家族や友人の看病を経験",
+      "description_ja": "家族や友人の看病を経験した",
+      "search_terms_ja": [
+        "家族や友人の看病を経験",
+        "家族や友人の看病を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "55e65044d9cbe364",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B01-L10",
+      "branch_id": "T05-B01",
+      "label_short_ja": "できることに目を向け直した",
+      "description_ja": "できることに目を向け直した",
+      "search_terms_ja": [
+        "できることに目を向け直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b49e959c4391cd95",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L01",
+      "branch_id": "T05-B02",
+      "label_short_ja": "不安が強い時期を経験",
+      "description_ja": "不安が強い時期を経験した",
+      "search_terms_ja": [
+        "不安が強い時期を経験した",
+        "不安が強い時期を経験"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b8faa0301c7818ba",
+      "visual_tags": [
+        "amber-ring",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L02",
+      "branch_id": "T05-B02",
+      "label_short_ja": "落ち込みが続く時期を経験",
+      "description_ja": "落ち込みが続く時期を経験した",
+      "search_terms_ja": [
+        "落ち込みが続く時期を経験した",
+        "落ち込みが続く時期を経験"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "04e338dc4465c78c",
+      "visual_tags": [
+        "river-jade",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L03",
+      "branch_id": "T05-B02",
+      "label_short_ja": "感情を表に出すのが苦手だった",
+      "description_ja": "感情を表に出すのが苦手だった",
+      "search_terms_ja": [
+        "感情を表に出すのが苦手だった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0aab3b2efa4f35d9",
+      "visual_tags": [
+        "moon-silver",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L04",
+      "branch_id": "T05-B02",
+      "label_short_ja": "周囲に元気なふりをしていた",
+      "description_ja": "周囲に元気なふりをしていた",
+      "search_terms_ja": [
+        "周囲に元気なふりをしていた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "4592958585dae101",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L05",
+      "branch_id": "T05-B02",
+      "label_short_ja": "相談することで少し楽になった",
+      "description_ja": "相談することで少し楽になった",
+      "search_terms_ja": [
+        "相談することで少し楽になった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ee945916143be5d6",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L06",
+      "branch_id": "T05-B02",
+      "label_short_ja": "休むことへの罪悪感があった",
+      "description_ja": "休むことへの罪悪感があった",
+      "search_terms_ja": [
+        "休むことへの罪悪感があった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "c2d906b269fb1941",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L07",
+      "branch_id": "T05-B02",
+      "label_short_ja": "自分を責める癖に気づいた",
+      "description_ja": "自分を責める癖に気づいた",
+      "search_terms_ja": [
+        "自分を責める癖に気づいた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "85be0a66231ec1be",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L08",
+      "branch_id": "T05-B02",
+      "label_short_ja": "気持ちを言葉にする練習をした",
+      "description_ja": "気持ちを言葉にする練習をした",
+      "search_terms_ja": [
+        "気持ちを言葉にする練習をした"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d69454a2d82e22f5",
+      "visual_tags": [
+        "river-jade",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L09",
+      "branch_id": "T05-B02",
+      "label_short_ja": "安心できる習慣を発見",
+      "description_ja": "安心できる習慣を見つけた",
+      "search_terms_ja": [
+        "安心できる習慣を見つけた",
+        "安心できる習慣を発見"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1db2e7a0bd597fe0",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B02-L10",
+      "branch_id": "T05-B02",
+      "label_short_ja": "回復に波ことを受け入れた",
+      "description_ja": "回復に波があることを受け入れた",
+      "search_terms_ja": [
+        "回復に波があることを受け入れた",
+        "回復に波ことを受け入れた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "df593fe0cb85ccde",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L01",
+      "branch_id": "T05-B03",
+      "label_short_ja": "外見へのコンプレックスがある",
+      "description_ja": "外見へのコンプレックスがある",
+      "search_terms_ja": [
+        "外見へのコンプレックスがある"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "c8a4d17b5edae989",
+      "visual_tags": [
+        "river-jade",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L02",
+      "branch_id": "T05-B03",
+      "label_short_ja": "性格を否定的に捉えていた",
+      "description_ja": "性格を否定的に捉えていた",
+      "search_terms_ja": [
+        "性格を否定的に捉えていた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "b7a28e8baea57d99",
+      "visual_tags": [
+        "summer-canopy",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L03",
+      "branch_id": "T05-B03",
+      "label_short_ja": "他人と比較して落ち込んだ",
+      "description_ja": "他人と比較して落ち込んだ",
+      "search_terms_ja": [
+        "他人と比較して落ち込んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "19c9fb5dd133a632",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L04",
+      "branch_id": "T05-B03",
+      "label_short_ja": "得意不得意の差に悩んだ",
+      "description_ja": "得意不得意の差に悩んだ",
+      "search_terms_ja": [
+        "得意不得意の差に悩んだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ed29a6389aa9cd7a",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L05",
+      "branch_id": "T05-B03",
+      "label_short_ja": "過去の失敗を引きずっていた",
+      "description_ja": "過去の失敗を引きずっていた",
+      "search_terms_ja": [
+        "過去の失敗を引きずっていた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "7f585a4f0feb79bc",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L06",
+      "branch_id": "T05-B03",
+      "label_short_ja": "自分の弱さを人に話せた",
+      "description_ja": "自分の弱さを人に話せた",
+      "search_terms_ja": [
+        "自分の弱さを人に話せた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "de26251c7744bdbb",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L07",
+      "branch_id": "T05-B03",
+      "label_short_ja": "苦手さに合う工夫を発見",
+      "description_ja": "苦手さに合う工夫を見つけた",
+      "search_terms_ja": [
+        "苦手さに合う工夫を見つけた",
+        "苦手さに合う工夫を発見"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ea64690629ea2b29",
+      "visual_tags": [
+        "moon-silver",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L08",
+      "branch_id": "T05-B03",
+      "label_short_ja": "褒め言葉を受け取れる",
+      "description_ja": "褒め言葉を受け取れるようになった",
+      "search_terms_ja": [
+        "褒め言葉を受け取れるようになった",
+        "褒め言葉を受け取れる"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "af44b3f1da4fb567",
+      "visual_tags": [
+        "spring-mist",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L09",
+      "branch_id": "T05-B03",
+      "label_short_ja": "欠点だと思った部分が役立った",
+      "description_ja": "欠点だと思った部分が役立った",
+      "search_terms_ja": [
+        "欠点だと思った部分が役立った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "8acb3c30ed29be0f",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B03-L10",
+      "branch_id": "T05-B03",
+      "label_short_ja": "自分への見方を更新",
+      "description_ja": "自分への見方を更新している",
+      "search_terms_ja": [
+        "自分への見方を更新",
+        "自分への見方を更新している"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1c61d35894b970c9",
+      "visual_tags": [
+        "spring-mist",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L01",
+      "branch_id": "T05-B04",
+      "label_short_ja": "大切な人との死別を経験",
+      "description_ja": "大切な人との死別を経験した",
+      "search_terms_ja": [
+        "大切な人との死別を経験",
+        "大切な人との死別を経験した"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "db0942b357494887",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L02",
+      "branch_id": "T05-B04",
+      "label_short_ja": "家族や友人との別れを経験",
+      "description_ja": "家族や友人との別れを経験した",
+      "search_terms_ja": [
+        "家族や友人との別れを経験",
+        "家族や友人との別れを経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "01054cb9994bec2a",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L03",
+      "branch_id": "T05-B04",
+      "label_short_ja": "ペットとの別れを経験",
+      "description_ja": "ペットとの別れを経験した",
+      "search_terms_ja": [
+        "ペットとの別れを経験",
+        "ペットとの別れを経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "23ea86c6defbd6a2",
+      "visual_tags": [
+        "spring-mist",
+        "arcing-limb",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L04",
+      "branch_id": "T05-B04",
+      "label_short_ja": "故郷や家を失う感覚を経験",
+      "description_ja": "故郷や家を失う感覚を経験した",
+      "search_terms_ja": [
+        "故郷や家を失う感覚を経験した",
+        "故郷や家を失う感覚を経験"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "afbe68085e9b2e12",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L05",
+      "branch_id": "T05-B04",
+      "label_short_ja": "夢や目標を手放した",
+      "description_ja": "夢や目標を手放した",
+      "search_terms_ja": [
+        "夢や目標を手放した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "ee1edc650a69b149",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L06",
+      "branch_id": "T05-B04",
+      "label_short_ja": "思い出がつらい時期",
+      "description_ja": "思い出に触れるのがつらい時期があった",
+      "search_terms_ja": [
+        "思い出がつらい時期",
+        "思い出に触れるのがつらい時期があった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "cda9daaf35ec47ed",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L07",
+      "branch_id": "T05-B04",
+      "label_short_ja": "悲しみを分かち合える人がいた",
+      "description_ja": "悲しみを分かち合える人がいた",
+      "search_terms_ja": [
+        "悲しみを分かち合える人がいた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "e1b791a5b83b4b8f",
+      "visual_tags": [
+        "summer-canopy",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L08",
+      "branch_id": "T05-B04",
+      "label_short_ja": "悲しみの形が変わった",
+      "description_ja": "時間とともに悲しみの形が変わった",
+      "search_terms_ja": [
+        "悲しみの形が変わった",
+        "時間とともに悲しみの形が変わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "68effd6f648ae26f",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L09",
+      "branch_id": "T05-B04",
+      "label_short_ja": "別れで大切さに気づいた",
+      "description_ja": "別れを通じて大切なものに気づいた",
+      "search_terms_ja": [
+        "別れで大切さに気づいた",
+        "別れを通じて大切なものに気づいた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "91ddff2a77648574",
+      "visual_tags": [
+        "petal-dawn",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B04-L10",
+      "branch_id": "T05-B04",
+      "label_short_ja": "思い出と共に生きる方法を探",
+      "description_ja": "思い出と共に生きる方法を探している",
+      "search_terms_ja": [
+        "思い出と共に生きる方法を探",
+        "思い出と共に生きる方法を探している"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "6cfc164d65c75a5a",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L01",
+      "branch_id": "T05-B05",
+      "label_short_ja": "進学で環境が大きく変わった",
+      "description_ja": "進学で環境が大きく変わった",
+      "search_terms_ja": [
+        "進学で環境が大きく変わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0929bbb7344a3868",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L02",
+      "branch_id": "T05-B05",
+      "label_short_ja": "就職で生活が大きく変わった",
+      "description_ja": "就職で生活が大きく変わった",
+      "search_terms_ja": [
+        "就職で生活が大きく変わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "810cbe65258bbbde",
+      "visual_tags": [
+        "moon-silver",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L03",
+      "branch_id": "T05-B05",
+      "label_short_ja": "引っ越しや移住を経験",
+      "description_ja": "引っ越しや移住を経験した",
+      "search_terms_ja": [
+        "引っ越しや移住を経験",
+        "引っ越しや移住を経験した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "25396fd49e3e00a2",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L04",
+      "branch_id": "T05-B05",
+      "label_short_ja": "結婚や同居で生活が変わった",
+      "description_ja": "結婚や同居で生活が変わった",
+      "search_terms_ja": [
+        "結婚や同居で生活が変わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "07ffc4af01d5eec8",
+      "visual_tags": [
+        "spring-mist",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L05",
+      "branch_id": "T05-B05",
+      "label_short_ja": "子どもを迎え価値観が変化",
+      "description_ja": "子どもを迎えて価値観が変わった",
+      "search_terms_ja": [
+        "子どもを迎えて価値観が変わった",
+        "子どもを迎え価値観が変化"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "a608accaf41a4de8",
+      "visual_tags": [
+        "petal-dawn",
+        "layered-fan",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L06",
+      "branch_id": "T05-B05",
+      "label_short_ja": "介護が生活の中心になった",
+      "description_ja": "介護が生活の中心になった",
+      "search_terms_ja": [
+        "介護が生活の中心になった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "92f933fc91cdfe49",
+      "visual_tags": [
+        "star-dew",
+        "arcing-limb",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L07",
+      "branch_id": "T05-B05",
+      "label_short_ja": "退職後の生き方を考えた",
+      "description_ja": "退職後の生き方を考えた",
+      "search_terms_ja": [
+        "退職後の生き方を考えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "0890e10c6f6e1e7e",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L08",
+      "branch_id": "T05-B05",
+      "label_short_ja": "災害や社会状況の変化を経験",
+      "description_ja": "災害や社会状況の変化を経験した",
+      "search_terms_ja": [
+        "災害や社会状況の変化を経験した",
+        "災害や社会状況の変化を経験"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "bc4b51f009f5095b",
+      "visual_tags": [
+        "star-dew",
+        "wide-crown",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L09",
+      "branch_id": "T05-B05",
+      "label_short_ja": "予定外の出来事で計画を変えた",
+      "description_ja": "予定外の出来事で計画を変えた",
+      "search_terms_ja": [
+        "予定外の出来事で計画を変えた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "561362ddd826dbf1",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B05-L10",
+      "branch_id": "T05-B05",
+      "label_short_ja": "新しい日常を一から作った",
+      "description_ja": "新しい日常を一から作った",
+      "search_terms_ja": [
+        "新しい日常を一から作った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "36ff8a57abdcb2fc",
+      "visual_tags": [
+        "petal-dawn",
+        "wide-crown",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L01",
+      "branch_id": "T05-B06",
+      "label_short_ja": "睡眠を整えることから開始",
+      "description_ja": "睡眠を整えることから始めた",
+      "search_terms_ja": [
+        "睡眠を整えることから始めた",
+        "睡眠を整えることから開始"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "f058460d77870c61",
+      "visual_tags": [
+        "amber-ring",
+        "layered-fan",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L02",
+      "branch_id": "T05-B06",
+      "label_short_ja": "食生活を見直した",
+      "description_ja": "食生活を見直した",
+      "search_terms_ja": [
+        "食生活を見直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "d19cc536a0283a87",
+      "visual_tags": [
+        "star-dew",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L03",
+      "branch_id": "T05-B06",
+      "label_short_ja": "運動が心身の支えになった",
+      "description_ja": "運動が心身の支えになった",
+      "search_terms_ja": [
+        "運動が心身の支えになった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "cc77d0d310147cd9",
+      "visual_tags": [
+        "summer-canopy",
+        "arcing-limb",
+        "veil-light"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L04",
+      "branch_id": "T05-B06",
+      "label_short_ja": "お酒との関係を見直した",
+      "description_ja": "お酒や嗜好品との付き合いを見直した",
+      "search_terms_ja": [
+        "お酒や嗜好品との付き合いを見直した",
+        "お酒との関係を見直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "754dbdb7f7f66291",
+      "visual_tags": [
+        "petal-dawn",
+        "rounded-bowl",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L05",
+      "branch_id": "T05-B06",
+      "label_short_ja": "依存的な習慣に悩んだ",
+      "description_ja": "依存的な習慣に悩んだ",
+      "search_terms_ja": [
+        "依存的な習慣に悩んだ"
+      ],
+      "sensitivity": "caution",
+      "timeline_enabled": true,
+      "visual_seed": "a27d52714ffb0f8b",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L06",
+      "branch_id": "T05-B06",
+      "label_short_ja": "デジタルとの距離を見直した",
+      "description_ja": "デジタル機器との距離を見直した",
+      "search_terms_ja": [
+        "デジタルとの距離を見直した",
+        "デジタル機器との距離を見直した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "041ff18170fbb891",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L07",
+      "branch_id": "T05-B06",
+      "label_short_ja": "日記や記録が回復に役立った",
+      "description_ja": "日記や記録が回復に役立った",
+      "search_terms_ja": [
+        "日記や記録が回復に役立った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "44c4dd35ae1e8284",
+      "visual_tags": [
+        "petal-dawn",
+        "tall-spire",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L08",
+      "branch_id": "T05-B06",
+      "label_short_ja": "専門家や支援機関につながった",
+      "description_ja": "専門家や支援機関につながった",
+      "search_terms_ja": [
+        "専門家や支援機関につながった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "1795054a40f71585",
+      "visual_tags": [
+        "amber-ring",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L09",
+      "branch_id": "T05-B06",
+      "label_short_ja": "小さな目標を積み重ねた",
+      "description_ja": "小さな目標を積み重ねた",
+      "search_terms_ja": [
+        "小さな目標を積み重ねた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "da4186c039f02f79",
+      "visual_tags": [
+        "summer-canopy",
+        "wide-crown",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B06-L10",
+      "branch_id": "T05-B06",
+      "label_short_ja": "再不調から戻る方法",
+      "description_ja": "再び調子を崩しても戻る方法を知った",
+      "search_terms_ja": [
+        "再不調から戻る方法",
+        "再び調子を崩しても戻る方法を知った"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "364af20932f0985c",
+      "visual_tags": [
+        "petal-dawn",
+        "arcing-limb",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L01",
+      "branch_id": "T05-B07",
+      "label_short_ja": "人生の意味を考える時期",
+      "description_ja": "人生の意味を考える時期があった",
+      "search_terms_ja": [
+        "人生の意味を考える時期があった",
+        "人生の意味を考える時期"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "3acf297472dfbde1",
+      "visual_tags": [
+        "amber-ring",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L02",
+      "branch_id": "T05-B07",
+      "label_short_ja": "信仰や哲学に支えられた",
+      "description_ja": "信仰や哲学に支えられた",
+      "search_terms_ja": [
+        "信仰や哲学に支えられた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "51c4327539322d39",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L03",
+      "branch_id": "T05-B07",
+      "label_short_ja": "信じていた価値観が揺らいだ",
+      "description_ja": "信じていた価値観が揺らいだ",
+      "search_terms_ja": [
+        "信じていた価値観が揺らいだ"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "9e8bcdb930f93a1f",
+      "visual_tags": [
+        "river-jade",
+        "arcing-limb",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L04",
+      "branch_id": "T05-B07",
+      "label_short_ja": "人の役に立つ喜び",
+      "description_ja": "人の役に立つことに喜びを感じる",
+      "search_terms_ja": [
+        "人の役に立つ喜び",
+        "人の役に立つことに喜びを感じる"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "53115b969fd17ab4",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "quiet-fruit"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L05",
+      "branch_id": "T05-B07",
+      "label_short_ja": "創作や表現に救われた",
+      "description_ja": "創作や表現に救われた",
+      "search_terms_ja": [
+        "創作や表現に救われた"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "45ed2fc22880c108",
+      "visual_tags": [
+        "star-dew",
+        "rounded-bowl",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L06",
+      "branch_id": "T05-B07",
+      "label_short_ja": "自然の中で自分を取り戻した",
+      "description_ja": "自然の中で自分を取り戻した",
+      "search_terms_ja": [
+        "自然の中で自分を取り戻した"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "79655eab4d85483b",
+      "visual_tags": [
+        "amber-ring",
+        "tall-spire",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L07",
+      "branch_id": "T05-B07",
+      "label_short_ja": "旅や移動で考え方が変わった",
+      "description_ja": "旅や移動で考え方が変わった",
+      "search_terms_ja": [
+        "旅や移動で考え方が変わった"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "3cbafc4b2bd76fd5",
+      "visual_tags": [
+        "river-jade",
+        "tall-spire",
+        "fine-rings"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L08",
+      "branch_id": "T05-B07",
+      "label_short_ja": "年齢を重ねることへの不安",
+      "description_ja": "年齢を重ねることへの不安がある",
+      "search_terms_ja": [
+        "年齢を重ねることへの不安がある",
+        "年齢を重ねることへの不安"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "24166429a3d92006",
+      "visual_tags": [
+        "summer-canopy",
+        "rounded-bowl",
+        "soft-bloom"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L09",
+      "branch_id": "T05-B07",
+      "label_short_ja": "過去の経験を誰かに伝えたい",
+      "description_ja": "過去の経験を誰かに伝えたい",
+      "search_terms_ja": [
+        "過去の経験を誰かに伝えたい"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "e621e096c31729ed",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    },
+    {
+      "id": "T05-B07-L10",
+      "branch_id": "T05-B07",
+      "label_short_ja": "これからの生き方を選び直",
+      "description_ja": "これからの生き方を自分で選び直している",
+      "search_terms_ja": [
+        "これからの生き方を選び直",
+        "これからの生き方を自分で選び直している"
+      ],
+      "sensitivity": "normal",
+      "timeline_enabled": true,
+      "visual_seed": "5afdeff91429e3b3",
+      "visual_tags": [
+        "star-dew",
+        "layered-fan",
+        "seed-spark"
+      ],
+      "active": true,
+      "version": 1
+    }
+  ]
+}

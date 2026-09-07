@@ -1,25 +1,54 @@
 from __future__ import annotations
 
 import io
-import os
+import secrets
+from pathlib import Path
 
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+from PIL import Image, ImageOps, UnidentifiedImageError
 
-from .db import DATA_DIR
+from .config import MAX_UPLOAD_BYTES, UPLOAD_DIR
+
+ALLOWED = {"image/jpeg": "JPEG", "image/png": "PNG", "image/webp": "WEBP"}
 
 
-def stylize_selfie(data: bytes, user_id: int) -> str:
-    img = Image.open(io.BytesIO(data)).convert("RGB")
-    img = ImageOps.fit(img, (512, 512), Image.Resampling.LANCZOS)
-    img = img.filter(ImageFilter.MedianFilter(size=3))
-    img = ImageEnhance.Color(img).enhance(1.35)
-    img = ImageEnhance.Contrast(img).enhance(1.45)
-    img = img.quantize(colors=18, method=Image.Quantize.MEDIANCUT).convert("RGB")
-    img = img.filter(ImageFilter.SMOOTH_MORE)
-    overlay = Image.new("RGB", img.size, (16, 64, 42))
-    img = Image.blend(img, overlay, 0.12)
-    out_dir = os.path.join(DATA_DIR, "avatars")
-    os.makedirs(out_dir, exist_ok=True)
-    path = os.path.join(out_dir, f"u{user_id}.jpg")
-    img.save(path, "JPEG", quality=88)
-    return f"/media/avatars/u{user_id}.jpg"
+class ImageRejected(ValueError):
+    pass
+
+
+def save_image(data: bytes, declared_mime: str) -> tuple[str, str, str, int, int]:
+    if len(data) > MAX_UPLOAD_BYTES:
+        raise ImageRejected("file_too_large")
+    try:
+        img = Image.open(io.BytesIO(data))
+        img = ImageOps.exif_transpose(img)
+        img = img.convert("RGB")
+    except (UnidentifiedImageError, OSError) as exc:
+        raise ImageRejected("invalid_image") from exc
+    fmt = ALLOWED.get(declared_mime)
+    if img.format and img.format not in {"JPEG", "PNG", "WEBP", None}:
+        raise ImageRejected("unsupported_type")
+    if declared_mime not in ALLOWED:
+        # trust actual decoded image, still reject exotic formats
+        if img.format not in {"JPEG", "PNG", "WEBP", None}:
+            raise ImageRejected("unsupported_type")
+        fmt = "JPEG"
+        mime = "image/jpeg"
+    else:
+        mime = declared_mime
+        fmt = ALLOWED[mime]
+    key = secrets.token_urlsafe(24)
+    UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    full_name = f"{key}.jpg"
+    thumb_name = f"{key}_t.jpg"
+    full_path = UPLOAD_DIR / full_name
+    thumb_path = UPLOAD_DIR / thumb_name
+    img.save(full_path, "JPEG", quality=88, optimize=True, exif=b"")
+    thumb = img.copy()
+    thumb.thumbnail((320, 320))
+    thumb.save(thumb_path, "JPEG", quality=82, optimize=True, exif=b"")
+    return full_name, thumb_name, "image/jpeg", img.width, img.height
+
+
+def media_path(name: str) -> Path:
+    safe = Path(name).name
+    return UPLOAD_DIR / safe
