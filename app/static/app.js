@@ -409,17 +409,45 @@ async function generateAiImage() {
     btn.disabled = true;
     btn.textContent = "描いています…";
   }
+  const failText = (code) => {
+    if (code === "ai_unavailable") return "画像生成の設定がありません。SVGが正式な木です";
+    if (code === "ai_auth") return "画像生成の認証に失敗しました。APIキーを確認してください";
+    if (code === "ai_billing") return "画像生成の利用枠がありません";
+    if (code === "ai_model") return "利用できる画像モデルがありません";
+    if (code === "ai_daily_limit") return "本日の生成回数の上限です（成功した生成が1日3回まで）";
+    if (code === "ai_quota") return "画像API側の制限です。数分待ってから再試行してください";
+    if (code === "ai_busy") return "いま生成中です。完了まで待ってください";
+    if (code === "rate_limited") return "少し待ってから試してください";
+    if (code === "csrf") return "もう一度ログインしてください";
+    return "生成に失敗したため、中央のSVGが正式な木です";
+  };
   try {
-    const r = await api(`/api/v1/me/tree/${version}/ai-image`, { method: "POST", json: {} });
-    me.ai_image_url = r.url;
-    renderTreeSvg();
-    toast("AIの木を中央に表示しました");
+    const start = await api(`/api/v1/me/tree/${version}/ai-image`, { method: "POST", json: {} });
+    if (start.url) {
+      me.ai_image_url = start.url;
+      renderTreeSvg();
+      toast("AIの木を中央に表示しました");
+      return;
+    }
+    const jobId = start.job_id;
+    if (!jobId) throw new Error("ai_provider_failed");
+    for (let i = 0; i < 45; i++) {
+      await new Promise((r) => setTimeout(r, 2000));
+      const job = await api(`/api/v1/me/ai-jobs/${jobId}`);
+      if (job.status === "succeeded" && job.url) {
+        me.ai_image_url = job.url;
+        renderTreeSvg();
+        toast("AIの木を中央に表示しました");
+        return;
+      }
+      if (job.status === "failed") {
+        toast(failText(job.error));
+        return;
+      }
+    }
+    toast("生成に時間がかかっています。少し待ってから画面を更新してください");
   } catch (err) {
-    const code = err.data?.error || "";
-    if (code === "ai_unavailable") toast("画像生成の設定がありません。SVGが正式な木です");
-    else if (code === "rate_limited" || err.status === 429) toast("回数の上限です。しばらくしてから試してください");
-    else if (code === "csrf") toast("もう一度ログインしてください");
-    else toast("生成に失敗したため、中央のSVGが正式な木です");
+    toast(failText(err.data?.error || ""));
   } finally {
     if (btn) {
       btn.disabled = false;

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import logging
 import secrets
+import threading
 import uuid
 from contextvars import ContextVar
 from datetime import datetime, timedelta, timezone
@@ -505,15 +506,35 @@ def do_publish(request: Request, db: Session = Depends(get_db), user: User = Dep
     return {"ok": True, "version_no": published.version_no, "svg_url": f"/api/v1/media/tree/{published.id}.svg"}
 
 
+def ai_success_count(db: Session, user_id: int) -> int:
+    since = utcnow() - timedelta(hours=24)
+    return int(
+        db.scalar(
+            select(func.count())
+            .select_from(AiJob)
+            .where(AiJob.user_id == user_id, AiJob.status == "succeeded", AiJob.created_at >= since)
+        )
+        or 0
+    )
+
+
 @app.post("/api/v1/me/tree/{version}/ai-image")
 def ai_image(version: int, request: Request, db: Session = Depends(get_db), user: User = Depends(require_user)):
     check_csrf(request)
-    rate_limit(f"ai:{user.id}", AI_DAILY_LIMIT, 86400)
     if not (IMAGE_PROVIDER and IMAGE_API_KEY):
         return error("ai_unavailable", 404)
     tree = db.scalar(select(TreeVersion).where(TreeVersion.user_id == user.id, TreeVersion.version_no == version))
     if not tree or tree.status != "published":
         return error("not_found", 404)
+    running = db.scalar(
+        select(AiJob)
+        .where(AiJob.user_id == user.id, AiJob.status.in_(("queued", "running")))
+        .order_by(AiJob.id.desc())
+    )
+    if running:
+        return {"ok": True, "status": running.status, "job_id": running.id, "version_no": version}
+    if ai_success_count(db, user.id) >= AI_DAILY_LIMIT:
+        return error("ai_daily_limit", 429)
     ids = leaf_ids_of(db, tree.id)
     tags = leaf_visual_tags(db, ids)
     job = AiJob(
@@ -528,20 +549,54 @@ def ai_image(version: int, request: Request, db: Session = Depends(get_db), user
     db.add(job)
     db.commit()
     db.refresh(job)
+    threading.Thread(target=_run_ai_job, args=(job.id, tree.id, tags), daemon=True).start()
+    return {"ok": True, "status": "queued", "job_id": job.id, "version_no": tree.version_no}
+
+
+def _run_ai_job(job_id: int, tree_id: int, tags: list[str]) -> None:
+    db = SessionLocal()
     try:
+        job = db.get(AiJob, job_id)
+        tree = db.get(TreeVersion, tree_id)
+        if not job or not tree:
+            return
+        job.status = "running"
+        db.commit()
         jpeg, model = generate_tree_jpeg(tags)
         name = save_tree_jpeg(jpeg)
-    except AiImageError:
-        job.status = "failed"
+        tree.ai_image_url = f"/api/v1/media/tree-ai/{name}"
+        tree.prompt_version = PROMPT_VERSION
+        job.status = "succeeded"
+        job.model = model
         db.commit()
-        return error("ai_provider_failed", 502, used_tags=tags, prompt_has_leaf_text=False)
-    url = f"/api/v1/media/tree-ai/{name}"
-    tree.ai_image_url = url
-    tree.prompt_version = PROMPT_VERSION
-    job.status = "succeeded"
-    job.model = model
-    db.commit()
-    return {"ok": True, "url": url, "version_no": tree.version_no, "model": model}
+    except AiImageError as exc:
+        job = db.get(AiJob, job_id)
+        if job:
+            job.status = "failed"
+            job.model = (exc.code or "ai_provider_failed")[:64]
+            db.commit()
+    except Exception:
+        log.exception("ai job failed")
+        job = db.get(AiJob, job_id)
+        if job:
+            job.status = "failed"
+            job.model = "ai_provider_failed"
+            db.commit()
+    finally:
+        db.close()
+
+
+@app.get("/api/v1/me/ai-jobs/{job_id}")
+def ai_job_status(job_id: int, db: Session = Depends(get_db), user: User = Depends(require_user)):
+    job = db.get(AiJob, job_id)
+    if not job or job.user_id != user.id:
+        return error("not_found", 404)
+    tree = db.get(TreeVersion, job.tree_version_id)
+    url = tree.ai_image_url if tree and job.status == "succeeded" else None
+    payload = {"status": job.status, "job_id": job.id, "url": url}
+    if job.status == "failed":
+        payload["error"] = job.model or "ai_provider_failed"
+    return payload
 
 
 @app.get("/api/v1/media/tree-ai/{name}")
