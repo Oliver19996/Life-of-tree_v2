@@ -4,6 +4,7 @@ import json
 import logging
 import secrets
 import uuid
+from contextvars import ContextVar
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Annotated, Optional
@@ -84,6 +85,7 @@ STATIC = Path(__file__).parent / "static"
 signer = URLSafeTimedSerializer(APP_SECRET, salt="tof-session")
 
 RATE: dict[str, list[float]] = {}
+JSON_BODY: ContextVar[dict] = ContextVar("json_body", default={})
 
 
 class RequestIdMiddleware(BaseHTTPMiddleware):
@@ -1394,6 +1396,9 @@ def analytics(request: Request):
 
 
 def _json(request: Request) -> dict:
+    data = JSON_BODY.get()
+    if data:
+        return data
     try:
         return getattr(request.state, "_json", None) or {}
     except Exception:
@@ -1402,14 +1407,19 @@ def _json(request: Request) -> dict:
 
 @app.middleware("http")
 async def load_json(request: Request, call_next):
+    data: dict = {}
     if request.headers.get("content-type", "").startswith("application/json"):
         try:
-            request.state._json = await request.json()
+            parsed = await request.json()
+            data = parsed if isinstance(parsed, dict) else {}
         except Exception:
-            request.state._json = {}
-    else:
-        request.state._json = {}
-    return await call_next(request)
+            data = {}
+    token = JSON_BODY.set(data)
+    try:
+        request.state._json = data
+        return await call_next(request)
+    finally:
+        JSON_BODY.reset(token)
 
 
 app.mount("/static", StaticFiles(directory=STATIC), name="static")

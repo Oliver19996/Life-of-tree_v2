@@ -25,7 +25,8 @@ function toast(msg) {
 
 async function api(path, opts = {}) {
   const headers = { ...(opts.headers || {}) };
-  if (csrf && opts.method && opts.method !== "GET") headers["X-CSRF-Token"] = csrf;
+  const token = csrfToken();
+  if (token && opts.method && opts.method !== "GET") headers["X-CSRF-Token"] = token;
   if (opts.json) {
     headers["Content-Type"] = "application/json";
     opts.body = JSON.stringify(opts.json);
@@ -41,6 +42,12 @@ async function api(path, opts = {}) {
     throw err;
   }
   return data;
+}
+
+function csrfToken() {
+  const part = document.cookie.split("; ").find((x) => x.startsWith("tof_csrf="));
+  if (part) return decodeURIComponent(part.slice("tof_csrf=".length));
+  return csrf || "";
 }
 
 function hash() {
@@ -275,8 +282,8 @@ async function renderSelect() {
       const r = await api(`/api/v1/catalog/search?q=${encodeURIComponent(q)}`);
       const only = $("#only-selected")?.checked;
       const items = r.items.filter((it) => !only || selected.has(it.id));
-      $("#search-hits").innerHTML = items.map((it) => `<button class="leaf-chip" data-sid="${it.id}" aria-pressed="${selected.has(it.id)}">${escapeHtml(it.label_short_ja)}</button>`).join("");
-      $("#search-hits").querySelectorAll("[data-sid]").forEach((b) => b.onclick = () => toggleLeaf(b.dataset.sid));
+      $("#search-hits").innerHTML = items.map((it) => `<button type="button" class="leaf-chip ${selected.has(it.id) ? "is-selected" : ""}" data-sid="${it.id}" aria-pressed="${selected.has(it.id)}"><span class="leaf-check">${selected.has(it.id) ? "✓" : ""}</span><span class="leaf-label">${escapeHtml(it.label_short_ja)}</span></button>`).join("");
+      $("#search-hits").querySelectorAll("[data-sid]").forEach((b) => b.onclick = () => toggleLeaf(b.dataset.sid, null, b));
     }, 200);
   }
 }
@@ -288,25 +295,29 @@ async function renderLeaves(branchId) {
   const selected = selectedSet();
   host.innerHTML = leaves.map((leaf) => {
     const long = leaf.label_short_ja.length > 12;
-    return `<button class="leaf-chip ${long ? "cardish" : ""}" data-leaf="${leaf.id}" aria-pressed="${selected.has(leaf.id)}">
-      ${selected.has(leaf.id) ? "✓ " : ""}${escapeHtml(leaf.label_short_ja)}
-      <span class="muted" data-more="${leaf.id}"> 詳しく見る</span>
+    const on = selected.has(leaf.id);
+    return `<button type="button" class="leaf-chip ${long ? "cardish" : ""} ${on ? "is-selected" : ""}" data-leaf="${leaf.id}" aria-pressed="${on}">
+      <span class="leaf-check" aria-hidden="true">${on ? "✓" : ""}</span>
+      <span class="leaf-label">${escapeHtml(leaf.label_short_ja)}</span>
+      <span class="leaf-more muted" data-more="${leaf.id}">詳しく見る</span>
     </button>`;
   }).join("");
   host.querySelectorAll("[data-leaf]").forEach((btn) => {
     btn.onclick = (e) => {
-      if (e.target.dataset.more) {
+      const more = e.target.closest && e.target.closest("[data-more]");
+      if (more) {
+        e.preventDefault();
         e.stopPropagation();
-        const leaf = leaves.find((l) => l.id === e.target.dataset.more);
-        alert(leaf.description_ja);
+        const leaf = leaves.find((l) => l.id === more.getAttribute("data-more"));
+        if (leaf) alert(leaf.description_ja);
         return;
       }
-      toggleLeaf(btn.dataset.leaf, leaves);
+      toggleLeaf(btn.dataset.leaf, leaves, btn);
     };
   });
 }
 
-async function toggleLeaf(id, leaves) {
+async function toggleLeaf(id, leaves, chip) {
   const leaf = (leaves || []).find((l) => l.id === id) || (await findLeaf(id));
   if (leaf?.sensitivity === "caution" && !cautionAck.has(id) && !selectedSet().has(id)) {
     const ok = confirm("この項目は注意して扱います。刺激の強い内容を含む場合があります。続けますか？");
@@ -318,10 +329,24 @@ async function toggleLeaf(id, leaves) {
     if (next.size > 40 && !confirm("選択を解除しますか？")) return;
     next.delete(id);
   } else next.add(id);
+  markChip(chip, next.has(id));
   const canvas = $(".tree-svg");
   canvas?.classList.add("pulse");
-  await saveSelections([...next]);
+  try {
+    await saveSelections([...next]);
+  } catch (err) {
+    toast(err.data?.error === "csrf" ? "もう一度ログインしてください" : "選択を保存できませんでした");
+    return;
+  }
   await renderSelect();
+}
+
+function markChip(chip, on) {
+  if (!chip) return;
+  chip.setAttribute("aria-pressed", on ? "true" : "false");
+  chip.classList.toggle("is-selected", on);
+  const check = chip.querySelector(".leaf-check");
+  if (check) check.textContent = on ? "✓" : "";
 }
 
 async function findLeaf(id) {
@@ -341,7 +366,10 @@ async function publishTree() {
     renderSelect();
     loadFruits(me.id);
   } catch (err) {
-    toast("まだ5つの幹が揃っていません");
+    const missing = err.data?.missing_trunks;
+    if (missing?.length) toast("まだ未完了の幹があります。各幹で葉を1つ以上選んでください");
+    else if (err.data?.error === "csrf") toast("もう一度ログインしてください");
+    else toast("完成できませんでした。各幹で葉が選ばれているか確認してください");
   }
 }
 

@@ -204,10 +204,31 @@ label { font-weight: 600; }
   color: var(--color-text);
 }
 .chip:hover, .leaf-chip:hover { background: var(--color-mint-50); }
-.chip[aria-pressed="true"], .leaf-chip[aria-pressed="true"] {
+.chip[aria-pressed="true"], .leaf-chip[aria-pressed="true"], .leaf-chip.is-selected {
   background: var(--color-primary-100);
   color: var(--color-primary-900);
   font-weight: 600;
+  border-color: var(--color-primary-700);
+}
+.leaf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.leaf-check {
+  display: inline-grid;
+  place-items: center;
+  width: 1.1em;
+  min-height: 1.1em;
+  flex: none;
+  font-weight: 700;
+  color: var(--color-primary-700);
+}
+.leaf-more {
+  margin-left: 2px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: help;
 }
 .leaf-chip.cardish { border-radius: var(--radius-card); max-width: 100%; white-space: normal; }
 .accordion { border: 0; background: transparent; width: 100%; text-align: left; padding: 10px 4px; font-weight: 600; }

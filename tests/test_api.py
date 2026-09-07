@@ -33,6 +33,8 @@ def publish_min(client: TestClient, email: str, shift: int = 0) -> TestClient:
     ]
     r = client.put("/api/v1/me/tree-draft/selections", json={"leaf_ids": leaves})
     assert r.status_code == 200
+    assert set(r.json()["leaf_ids"]) == set(leaves)
+    assert r.json()["can_publish"] is True
     r = client.post("/api/v1/me/tree-draft/publish", json={})
     assert r.status_code == 200
     return client
