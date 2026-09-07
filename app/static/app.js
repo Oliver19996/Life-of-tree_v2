@@ -64,6 +64,130 @@ function navShow(show) {
   });
 }
 
+function setLivingPage(on) {
+  document.body.classList.toggle("page-living", on);
+}
+
+function periodFromHour(h) {
+  if (h >= 5 && h < 8) return "dawn";
+  if (h >= 8 && h < 17) return "day";
+  if (h >= 17 && h < 19.5) return "dusk";
+  return "night";
+}
+
+function weatherKind(code, isDay) {
+  if ([95, 96, 99].includes(code)) return "storm";
+  if ([71, 73, 75, 77, 85, 86].includes(code)) return "snow";
+  if ((code >= 51 && code <= 67) || (code >= 80 && code <= 82)) return "rain";
+  if (code >= 45 && code <= 48) return "fog";
+  if (code >= 1 && code <= 3) return "cloud";
+  return isDay ? "clear" : "clear";
+}
+
+function weatherLabel(w) {
+  const sky = {
+    dawn: "明け方",
+    day: "昼",
+    dusk: "夕暮れ",
+    night: "夜",
+  }[w.period] || "";
+  const wx = {
+    clear: "晴れ",
+    cloud: "くもり",
+    fog: "霧",
+    rain: "雨",
+    snow: "雪",
+    storm: "雷雨",
+  }[w.wx] || "";
+  const wind = w.wind < 8 ? "風は穏やか" : w.wind < 18 ? "そよ風" : w.wind < 32 ? "風が強い" : "かなり強い風";
+  return `${sky}・${wx} · ${wind}`;
+}
+
+async function coordsForWeather() {
+  return new Promise((resolve) => {
+    if (!navigator.geolocation) return resolve({ lat: 35.68, lon: 139.76 });
+    navigator.geolocation.getCurrentPosition(
+      (p) => resolve({ lat: p.coords.latitude, lon: p.coords.longitude }),
+      () => resolve({ lat: 35.68, lon: 139.76 }),
+      { timeout: 4000, maximumAge: 600000 },
+    );
+  });
+}
+
+async function fetchWeather() {
+  try {
+    const cached = sessionStorage.getItem("tof-wx");
+    if (cached) {
+      const j = JSON.parse(cached);
+      if (Date.now() - j.at < 10 * 60 * 1000 && j.data) return j.data;
+    }
+  } catch { /* ignore */ }
+  const pos = await coordsForWeather();
+  const hour = new Date().getHours();
+  const fallback = { period: periodFromHour(hour), wx: hour >= 6 && hour < 18 ? "clear" : "clear", wind: 8, hour };
+  try {
+    const u = `https://api.open-meteo.com/v1/forecast?latitude=${pos.lat}&longitude=${pos.lon}&current=weather_code,is_day,wind_speed_10m&timezone=auto`;
+    const r = await fetch(u);
+    if (!r.ok) return fallback;
+    const j = await r.json();
+    const c = j.current || {};
+    const data = {
+      period: periodFromHour(hour),
+      wx: weatherKind(Number(c.weather_code) || 0, c.is_day !== 0),
+      wind: Number(c.wind_speed_10m) || 6,
+      hour,
+    };
+    sessionStorage.setItem("tof-wx", JSON.stringify({ at: Date.now(), data }));
+    return data;
+  } catch {
+    return fallback;
+  }
+}
+
+const GUEST_TREE_SVG = `<svg class="living-tree-img" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <ellipse cx="160" cy="400" rx="90" ry="14" fill="rgba(18,61,42,.18)"/>
+  <path d="M158 400 V210" stroke="#5a3a22" stroke-width="16" stroke-linecap="round"/>
+  <path d="M160 250 Q110 200 90 150" fill="none" stroke="#6b4528" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 240 Q210 190 235 140" fill="none" stroke="#6b4528" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 280 Q120 250 80 230" fill="none" stroke="#6b4528" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="96" cy="148" rx="58" ry="46" fill="#2d8a58"/>
+  <ellipse cx="228" cy="138" rx="62" ry="50" fill="#247a4c"/>
+  <ellipse cx="160" cy="118" rx="78" ry="62" fill="#35a66f"/>
+  <ellipse cx="78" cy="228" rx="36" ry="28" fill="#2f915c"/>
+</svg>`;
+
+function livingTreeMarkup(src, alt) {
+  const tree = src
+    ? `<img class="living-tree-img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" />`
+    : GUEST_TREE_SVG;
+  return `<div class="living-stage" id="living-stage" data-period="day" data-wx="clear">
+    <div class="sky-wash"></div>
+    <div class="sun-moon" aria-hidden="true"></div>
+    <div class="fx-stars" aria-hidden="true"></div>
+    <div class="fx-cloud c1" aria-hidden="true"></div>
+    <div class="fx-cloud c2" aria-hidden="true"></div>
+    <div class="fx-rain" aria-hidden="true"></div>
+    <div class="fx-snow" aria-hidden="true"></div>
+    <div class="fx-fog" aria-hidden="true"></div>
+    <div class="living-ground"></div>
+    <div class="living-tree-wrap">${tree}</div>
+  </div>`;
+}
+
+async function applyLivingWeather() {
+  const el = $("#living-stage");
+  if (!el) return;
+  const w = await fetchWeather();
+  el.dataset.period = w.period;
+  el.dataset.wx = w.wx;
+  const amp = Math.min(3.4, 0.4 + w.wind / 14);
+  const dur = Math.max(2.2, 8.2 - w.wind / 5.5);
+  el.style.setProperty("--amp", `${amp}deg`);
+  el.style.setProperty("--sway", `${dur}s`);
+  const label = $("#wx-label");
+  if (label) label.textContent = weatherLabel(w);
+}
+
 async function refreshMe() {
   try {
     me = await api("api/v1/me");
@@ -77,29 +201,43 @@ async function refreshMe() {
 }
 
 function landing() {
+  if (me) {
+    if (!me.age_verified) {
+      location.hash = "#age";
+      return;
+    }
+    location.hash = me.has_published_tree ? "#home" : "#tree";
+    return;
+  }
   navShow(false);
+  setLivingPage(true);
   app.innerHTML = `
-    <section class="hero stack">
-      <h1>人生の経験が、一本の木になる</h1>
-      <p>幹・枝・葉から経験を選ぶと、選ぶたびに木が育ちます。完成した木を通じて、近い境遇の人と安全につながれます。18歳以上限定です。</p>
-      <p class="muted">選択内容は原則非公開です。木は診断や人格評価ではありません。医療・法律・緊急支援の代替ではありません。</p>
-      <form id="demo-form" class="stack">
-        <label>開発用デモログイン（メール）
-          <input name="email" type="email" value="you@local.test" required />
-        </label>
-        <div class="row">
-          <button class="btn" type="submit">デモで始める</button>
-          <button class="btn secondary" type="button" id="magic">マジックリンクを送る</button>
-          ${me && me.google_enabled ? `<a class="btn secondary" href="/api/v1/auth/google/start">Googleで続ける</a>` : ""}
-        </div>
-      </form>
+    <section class="home-hero landing-hero">
+      ${livingTreeMarkup("", "人生の木")}
+      <div class="home-copy hero-card stack">
+        <p class="wx-label" id="wx-label"></p>
+        <h1>人生の経験が、一本の木になる</h1>
+        <p>幹・枝・葉から経験を選ぶと、選ぶたびに木が育ちます。完成した木を通じて、近い境遇の人と安全につながれます。18歳以上限定です。</p>
+        <p class="muted">選択内容は原則非公開です。木は診断や人格評価ではありません。医療・法律・緊急支援の代替ではありません。</p>
+        <form id="demo-form" class="stack">
+          <label>開発用デモログイン（メール）
+            <input name="email" type="email" value="you@local.test" required />
+          </label>
+          <div class="row">
+            <button class="btn" type="submit">デモで始める</button>
+            <button class="btn secondary" type="button" id="magic">マジックリンクを送る</button>
+            ${me && me.google_enabled ? `<a class="btn secondary" href="/api/v1/auth/google/start">Googleで続ける</a>` : ""}
+          </div>
+        </form>
+      </div>
     </section>`;
+  applyLivingWeather();
   $("#demo-form").onsubmit = async (e) => {
     e.preventDefault();
     const email = new FormData(e.target).get("email");
     await api("/api/v1/auth/demo", { method: "POST", json: { email } });
     await refreshMe();
-    location.hash = me.age_verified ? (me.has_published_tree ? "#tree" : "#tree") : "#age";
+    location.hash = me.age_verified ? (me.has_published_tree ? "#home" : "#tree") : "#age";
     route();
   };
   $("#magic").onclick = async () => {
@@ -173,6 +311,28 @@ function profileView() {
   };
 }
 
+async function homeView() {
+  navShow(true);
+  setLivingPage(true);
+  const src = me?.ai_image_url || me?.tree_url || "";
+  const name = me?.profile?.display_name || "あなた";
+  app.innerHTML = `
+    <section class="home-hero">
+      ${livingTreeMarkup(src, `${name}さんの人生の木`)}
+      <div class="home-copy stack">
+        <p class="wx-label" id="wx-label"></p>
+        <h1>${src ? "いまの木" : "まだ木は芽吹いていません"}</h1>
+        <p>${src
+          ? "今日の空と風に合わせて、木がわずかに揺れています。"
+          : "幹・枝・葉を選ぶと、あなたの木が育ちます。"}</p>
+        <div class="row">
+          <a class="btn" href="#tree">${src ? "木を編集する" : "木をつくる"}</a>
+        </div>
+      </div>
+    </section>`;
+  await applyLivingWeather();
+}
+
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
@@ -203,6 +363,20 @@ async function saveSelections(ids) {
   renderTrunks();
 }
 
+async function clearSelections(keepFn, message) {
+  const ids = draft?.leaf_ids || [];
+  const next = ids.filter(keepFn);
+  if (next.length === ids.length) return;
+  if (!confirm(message)) return;
+  try {
+    await saveSelections(next);
+    await renderSelect();
+    toast("選択をはずしました");
+  } catch {
+    toast("選択をはずせませんでした");
+  }
+}
+
 function localCanPublish() {
   const ids = draft?.leaf_ids || [];
   const trunks = catalog.trunks || [];
@@ -220,7 +394,8 @@ function renderTreeSvg() {
   if (!canvas || !draft) return;
   const wrap = $("#tree-svg");
   if (me?.ai_image_url) {
-    wrap.innerHTML = `<img class="tree-photo" src="${me.ai_image_url}" alt="完成した木" />`;
+    wrap.innerHTML = livingTreeMarkup(me.ai_image_url, "完成した木");
+    applyLivingWeather();
   } else {
     wrap.innerHTML = draft.svg || "";
   }
@@ -256,13 +431,24 @@ function renderTrunks() {
     const count = Math.max(p.count || 0, (draft.leaf_ids || []).filter((id) => id === t.id || id.startsWith(`${t.id}-`)).length);
     return `
       ${i ? '<div class="life-line"></div>' : ""}
-      <button class="trunk-node" data-trunk="${t.id}" ${currentTrunk === t.id ? 'aria-current="true"' : ""}>
-        <span class="dot ${done ? "done" : ""}">${done ? "✓" : count}</span>
-        <span><strong>${escapeHtml(t.label_ja)}</strong><br /><span class="muted">${done ? "1つ以上選択済み" : "未完了"} · ${count}葉</span></span>
-      </button>`;
+      <div class="trunk-block">
+        <button type="button" class="trunk-node" data-trunk="${t.id}" ${currentTrunk === t.id ? 'aria-current="true"' : ""}>
+          <span class="dot ${done ? "done" : ""}">${done ? "✓" : count}</span>
+          <span><strong>${escapeHtml(t.label_ja)}</strong><br /><span class="muted">${done ? "1つ以上選択済み" : "未完了"} · ${count}葉</span></span>
+        </button>
+        ${count ? `<button type="button" class="btn ghost sm" data-clear-trunk="${t.id}">この幹をはずす</button>` : ""}
+      </div>`;
   }).join("");
   host.querySelectorAll("[data-trunk]").forEach((btn) => {
     btn.onclick = () => { currentTrunk = btn.dataset.trunk; openBranch = null; renderSelect(); renderTrunks(); };
+  });
+  host.querySelectorAll("[data-clear-trunk]").forEach((btn) => {
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      const id = btn.dataset.clearTrunk;
+      const label = catalog.trunks.find((x) => x.id === id)?.label_ja || "この幹";
+      clearSelections((lid) => !(lid === id || lid.startsWith(`${id}-`)), `「${label}」の選択をすべてはずしますか？`);
+    };
   });
 }
 
@@ -289,6 +475,7 @@ async function renderSelect() {
       <div id="search-hits"></div>`}
     <div id="branch-list"></div>
     <div class="sticky-next row">
+      ${selected.size ? `<button type="button" class="btn secondary" id="clear-all">すべての選択をはずす</button>` : ""}
       ${complete && simpleMode ? `<button class="btn" id="next-trunk">次の幹へ</button>` : ""}
       ${(draft.can_publish || localCanPublish()) ? `<button class="btn" id="publish">この木を完成させる</button>` : `<span class="muted">5つの幹で1葉以上選ぶと完成できます（いま ${grownCount()} / ${(catalog.trunks || []).length || 5}）</span>`}
     </div>`;
@@ -296,7 +483,10 @@ async function renderSelect() {
   list.innerHTML = branches.map((b) => {
     const count = [...selected].filter((id) => id === b.id || id.startsWith(`${b.id}-`)).length;
     return `<div>
-      <button class="accordion" data-branch="${b.id}" aria-expanded="${openBranch === b.id}">${openBranch === b.id ? "▲" : "▼"} ${escapeHtml(b.label_ja)} ${count ? `· 選択 ${count}` : ""}</button>
+      <div class="branch-head">
+        <button type="button" class="accordion" data-branch="${b.id}" aria-expanded="${openBranch === b.id}">${openBranch === b.id ? "▲" : "▼"} ${escapeHtml(b.label_ja)} ${count ? `· 選択 ${count}` : ""}</button>
+        ${count ? `<button type="button" class="btn ghost sm" data-clear-branch="${b.id}">この枝をはずす</button>` : ""}
+      </div>
       <div class="chips" id="leaves-${b.id}"></div>
     </div>`;
   }).join("");
@@ -304,6 +494,14 @@ async function renderSelect() {
     btn.onclick = async () => {
       openBranch = openBranch === btn.dataset.branch ? null : btn.dataset.branch;
       await renderSelect();
+    };
+  });
+  list.querySelectorAll("[data-clear-branch]").forEach((btn) => {
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      const id = btn.dataset.clearBranch;
+      const label = branches.find((x) => x.id === id)?.label_ja || "この枝";
+      clearSelections((lid) => !(lid === id || lid.startsWith(`${id}-`)), `「${label}」の選択をすべてはずしますか？`);
     };
   });
   if (openBranch) await renderLeaves(openBranch);
@@ -317,6 +515,8 @@ async function renderSelect() {
   };
   const pub = $("#publish");
   if (pub) pub.onclick = publishTree;
+  const clearAll = $("#clear-all");
+  if (clearAll) clearAll.onclick = () => clearSelections(() => false, "すべての選択をはずしますか？木は未完成に戻ります。");
   const search = $("#leaf-search");
   if (search) {
     search.oninput = debounce(async () => {
@@ -339,9 +539,10 @@ async function renderLeaves(branchId) {
   host.innerHTML = leaves.map((leaf) => {
     const long = leaf.label_short_ja.length > 12;
     const on = selected.has(leaf.id);
-    return `<button type="button" class="leaf-chip ${long ? "cardish" : ""} ${on ? "is-selected" : ""}" data-leaf="${leaf.id}" aria-pressed="${on}">
+    return `<button type="button" class="leaf-chip ${long ? "cardish" : ""} ${on ? "is-selected" : ""}" data-leaf="${leaf.id}" aria-pressed="${on}" aria-label="${escapeHtml(leaf.label_short_ja)}${on ? "（選択済み。クリックではずす）" : ""}">
       <span class="leaf-check" aria-hidden="true">${on ? "✓" : ""}</span>
       <span class="leaf-label">${escapeHtml(leaf.label_short_ja)}</span>
+      ${on ? `<span class="leaf-off">はずす</span>` : ""}
       <span class="leaf-more muted" data-more="${leaf.id}">詳しく見る</span>
     </button>`;
   }).join("");
@@ -369,7 +570,6 @@ async function toggleLeaf(id, leaves, chip) {
   }
   const next = selectedSet();
   if (next.has(id)) {
-    if (next.size > 40 && !confirm("選択を解除しますか？")) return;
     next.delete(id);
   } else next.add(id);
   markChip(chip, next.has(id));
@@ -425,6 +625,7 @@ async function generateAiImage() {
     const start = await api(`/api/v1/me/tree/${version}/ai-image`, { method: "POST", json: {} });
     if (start.url) {
       me.ai_image_url = start.url;
+      me.tree_url = start.url;
       renderTreeSvg();
       toast("AIの木を中央に表示しました");
       return;
@@ -436,6 +637,7 @@ async function generateAiImage() {
       const job = await api(`/api/v1/me/ai-jobs/${jobId}`);
       if (job.status === "succeeded" && job.url) {
         me.ai_image_url = job.url;
+        me.tree_url = job.url;
         renderTreeSvg();
         toast("AIの木を中央に表示しました");
         return;
@@ -888,6 +1090,7 @@ async function route() {
   const gen = ++routeGen;
   await refreshMe();
   if (gen !== routeGen) return;
+  setLivingPage(false);
   const h = hash();
   if (!me && h !== "landing") {
     location.hash = "#landing";
@@ -895,6 +1098,7 @@ async function route() {
   }
   const map = {
     landing: landing,
+    home: homeView,
     age: ageView,
     profile: profileView,
     tree: treeView,

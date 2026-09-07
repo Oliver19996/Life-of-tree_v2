@@ -55,6 +55,19 @@ def test_catalog_counts():
     assert len(r.json()["leaves"]) == 10
 
 
+def test_me_tree_url_after_publish():
+    init_db()
+    c = TestClient(app)
+    publish_min(c, "treeurl@local.test")
+    r = c.get("/api/v1/me")
+    assert r.status_code == 200
+    body = r.json()
+    assert body["has_published_tree"] is True
+    assert body["tree_url"]
+    assert body["tree_url"].endswith(".svg")
+    assert body["ai_image_url"] is None
+
+
 def test_incomplete_publish_422():
     init_db()
     c = TestClient(app)

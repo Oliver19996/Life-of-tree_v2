@@ -362,6 +362,10 @@ def me(request: Request, db: Session = Depends(get_db), user: User = Depends(req
         "has_published_tree": published is not None,
         "published_version_no": published.version_no if published else None,
         "ai_image_url": published.ai_image_url if published else None,
+        "tree_url": (
+            (published.ai_image_url if published and published.ai_image_url else None)
+            or (f"/api/v1/media/tree/{published.id}.svg" if published else None)
+        ),
         "csrf": request.cookies.get(CSRF_COOKIE),
         "growth": growth_name_only(db, user.id) if published else None,
     }
